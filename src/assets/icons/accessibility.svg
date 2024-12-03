@@ -1,25 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24">
-  <rect
-    data-element="frame"
-    x="0"
-    y="0"
-    width="24"
-    height="24"
-    rx="24"
-    ry="24"
-    stroke="none"
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M24 12C24 5.37109 18.627 0 12 0C5.37305 0 0 5.37109 0 12C0 18.6289 5.37305 24 12 24C18.627 24 24 18.6289 24 12ZM12 8.40234C12.9941 8.40234 13.7998 7.59375 13.7998 6.60156C13.7998 5.60547 12.9941 4.80078 12 4.80078C11.0059 4.80078 10.2002 5.60547 10.2002 6.60156C10.2002 7.23828 10.5303 7.79688 11.0293 8.11719C11.3096 8.29688 11.6426 8.40234 12 8.40234ZM6 10.1992V9H18L17.999 10.1992H14.1201L14.4189 19.0312L12.9209 19.082L12.7617 14.4023H11.2373L11.0781 19.082L9.58008 19.0312L9.87891 10.1992H6Z"
     fill="currentcolor"
-  ></rect>
-  <g
-    transform="translate(4.800000000000001 4.800000000000001) scale(0.6)"
-    fill="#FFFFFF"
-    class="nc-icon-wrapper"
-  >
-    <circle cx="12" cy="3" r="3" fill="#FFFFFF" stroke-width="0" data-color="color-2"></circle>
-    <path
-      d="m22,7H2v2h6.465l-.499,14.715,2.497.085.266-7.8h2.54l.266,7.8,2.497-.085-.499-14.715h6.465v-2Z"
-      stroke-width="0"
-      fill="#FFFFFF"
-    ></path>
-  </g>
+  />
 </svg>
