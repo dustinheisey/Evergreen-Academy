@@ -1,23 +1,29 @@
 <script setup lang="ts">
 import EaIcon from '../ea-icon/ea-icon.vue'
 import type { Icons } from '../component-types.ts'
+import { computed } from 'vue'
+import { RouterLink } from 'vue-router'
 
 const {
   variant = 'primary',
   icon,
   size = 'm',
+  href,
 } = defineProps<{
   variant?: 'primary' | 'secondary' | 'tertiary' | 'icon' | 'icon-subtle'
   icon?: Icons
   size?: 's' | 'm' | 'l'
+  href?: string
 }>()
+
+const classes = computed(() => ['btn', 'btn-' + variant, 'gap-xs'])
 </script>
 
 <template>
-  <button :class="['btn', 'btn-' + variant, 'gap-xs']">
+  <component :is="href ? 'router-link' : 'button'" :to="href" :class="classes">
     <ea-icon v-if="icon" :name="icon" :size="size" />
     <slot></slot>
-  </button>
+  </component>
 </template>
 
 <style lang="scss" scoped>
