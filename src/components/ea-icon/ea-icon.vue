@@ -1,29 +1,30 @@
 <script setup lang="ts">
 import { defineAsyncComponent } from 'vue'
+import type { Icons } from '../component-types.ts'
 
 const {
   name,
   size = 'm',
-  color = 'primary',
+  variant,
 } = defineProps<{
-  name: 'accessibility' | 'back' | 'qr-code' | 'close' | 'down' | 'search' | 'menu' | 'world'
+  name: Icons
   size?: 's' | 'm' | 'l' | 'xl'
-  color?: 'primary' | 'secondary' | 'tertiary' | 'error' | 'surface'
+  variant?: 'primary' | 'secondary' | 'tertiary' | 'error' | 'surface' | 'inverse'
 }>()
 
 const icon = defineAsyncComponent(() => import(`../../assets/icons/${name}.svg`))
 </script>
 
 <template>
-  <component :is="icon" :class="['icon', 'icon-' + color, 'icon-' + size]" />
+  <component :is="icon" :class="['icon', 'icon-' + variant, 'icon-' + size]" />
 </template>
 
 <style scoped lang="scss">
 .icon {
   display: inline-block;
   color: inherit;
-  inline-size: var(--size, 2rem);
-  block-size: var(--size, 2rem);
+  inline-size: var(--size, 1.5rem);
+  block-size: var(--size, 1.5rem);
   line-height: 1;
   flex-shrink: 0;
   max-width: initial;
@@ -47,15 +48,15 @@ const icon = defineAsyncComponent(() => import(`../../assets/icons/${name}.svg`)
   color: var(--color-on-surface);
 }
 .icon-s {
-  --size: 1.5rem;
+  --size: 1.25rem;
 }
 .icon-m {
-  --size: 2rem;
+  --size: 1.5rem;
 }
 .icon-l {
-  --size: 3rem;
+  --size: 2rem;
 }
 .icon-xl {
-  --size: 4rem;
+  --size: 3rem;
 }
 </style>

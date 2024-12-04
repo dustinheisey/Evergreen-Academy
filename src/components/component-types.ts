@@ -7,3 +7,4 @@ export type Icons =
   | 'search'
   | 'menu'
   | 'world'
+  | 'camera'
