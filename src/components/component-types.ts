@@ -8,3 +8,8 @@ export type Icons =
   | 'menu'
   | 'world'
   | 'camera'
+  | 'art'
+  | 'environment'
+  | 'speaking'
+  | 'trophy'
+  | 'writing'
