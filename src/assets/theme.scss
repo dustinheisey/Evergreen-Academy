@@ -3,15 +3,15 @@
   src: url();
 }
 
-@font-face{
-  font-family: "Trajan Pro";
-  src:local("TrajanPro-Bold"),
-  url('./fonts/Trajan_Pro/TrajanPro-Bold.ttf') 
+@font-face {
+  font-family: 'Trajan Pro';
+  src: local('TrajanPro-Bold'), url('./fonts/Trajan_Pro/TrajanPro-Bold.ttf');
 }
 :root {
   // ? Typography
-  --font-family-headline: 'Trajan Pro', Georgia, 'Times New Roman', 'Palatino Linotype', serif;;
-  --font-family-body: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+  --font-family-headline: 'Trajan Pro', Georgia, 'Times New Roman', 'Palatino Linotype', serif;
+  --font-family-body: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro,
+    sans-serif;
 
   // ? layout
   --inset-page: var(--space-m-l);
@@ -132,7 +132,6 @@
   --color-surface-container: var(--color-surface-container-light);
   --color-surface-container-high: var(--color-surface-container-high-light);
   --color-surface-container-highest: var(--color-surface-container-highest-light);
-
 }
 
 :root.mode-dark,
@@ -171,69 +170,69 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-  --color-primary: var(--color-primary-dark);
-  --color-on-primary: var(--color-on-primary-dark);
-  --color-primary-container: var(--color-primary-container-dark);
-  --color-on-primary-container: var(--color-on-primary-container-dark);
-  --color-secondary: var(--color-secondary-dark);
-  --color-on-secondary: var(--color-on-secondary-dark);
-  --color-secondary-container: var(--color-secondary-container-dark);
-  --color-on-secondary-container: var(--color-on-secondary-container-dark);
-  --color-tertiary: var(--color-tertiary-dark);
-  --color-on-tertiary: var(--color-on-tertiary-dark);
-  --color-tertiary-container: var(--color-tertiary-container-dark);
-  --color-on-tertiary-container: var(--color-on-tertiary-container-dark);
-  --color-error: var(--color-error-dark);
-  --color-on-error: var(--color-on-error-dark);
-  --color-error-container: var(--color-error-container-dark);
-  --color-on-error-container: var(--color-on-error-container-dark);
-  --color-background: var(--color-background-dark);
-  --color-on-background: var(--color-on-background-dark);
-  --color-surface: var(--color-surface-dark);
-  --color-on-surface: var(--color-on-surface-dark);
-  --color-outline: var(--color-outline-dark);
-  --color-outline-variant: var(--color-outline-variant-dark);
-  --color-inverse-surface: var(--color-inverse-surface-dark);
-  --color-inverse-on-surface: var(--color-inverse-on-surface-dark);
-  --color-inverse-primary: var(--color-inverse-primary-dark);
-  --color-surface-container-lowest: var(--color-surface-container-lowest-dark);
-  --color-surface-container-low: var(--color-surface-container-low-dark);
-  --color-surface-container: var(--color-surface-container-dark);
-  --color-surface-container-high: var(--color-surface-container-high-dark);
-  --color-surface-container-highest: var(--color-surface-container-highest-dark);
+    --color-primary: var(--color-primary-dark);
+    --color-on-primary: var(--color-on-primary-dark);
+    --color-primary-container: var(--color-primary-container-dark);
+    --color-on-primary-container: var(--color-on-primary-container-dark);
+    --color-secondary: var(--color-secondary-dark);
+    --color-on-secondary: var(--color-on-secondary-dark);
+    --color-secondary-container: var(--color-secondary-container-dark);
+    --color-on-secondary-container: var(--color-on-secondary-container-dark);
+    --color-tertiary: var(--color-tertiary-dark);
+    --color-on-tertiary: var(--color-on-tertiary-dark);
+    --color-tertiary-container: var(--color-tertiary-container-dark);
+    --color-on-tertiary-container: var(--color-on-tertiary-container-dark);
+    --color-error: var(--color-error-dark);
+    --color-on-error: var(--color-on-error-dark);
+    --color-error-container: var(--color-error-container-dark);
+    --color-on-error-container: var(--color-on-error-container-dark);
+    --color-background: var(--color-background-dark);
+    --color-on-background: var(--color-on-background-dark);
+    --color-surface: var(--color-surface-dark);
+    --color-on-surface: var(--color-on-surface-dark);
+    --color-outline: var(--color-outline-dark);
+    --color-outline-variant: var(--color-outline-variant-dark);
+    --color-inverse-surface: var(--color-inverse-surface-dark);
+    --color-inverse-on-surface: var(--color-inverse-on-surface-dark);
+    --color-inverse-primary: var(--color-inverse-primary-dark);
+    --color-surface-container-lowest: var(--color-surface-container-lowest-dark);
+    --color-surface-container-low: var(--color-surface-container-low-dark);
+    --color-surface-container: var(--color-surface-container-dark);
+    --color-surface-container-high: var(--color-surface-container-high-dark);
+    --color-surface-container-highest: var(--color-surface-container-highest-dark);
   }
 
   :root.mode-light,
   :root[data-theme='light'] {
     --color-primary: var(--color-primary-light);
-  --color-on-primary: var(--color-on-primary-light);
-  --color-primary-container: var(--color-primary-container-light);
-  --color-on-primary-container: var(--color-on-primary-container-light);
-  --color-secondary: var(--color-secondary-light);
-  --color-on-secondary: var(--color-on-secondary-light);
-  --color-secondary-container: var(--color-secondary-container-light);
-  --color-on-secondary-container: var(--color-on-secondary-container-light);
-  --color-tertiary: var(--color-tertiary-light);
-  --color-on-tertiary: var(--color-on-tertiary-light);
-  --color-tertiary-container: var(--color-tertiary-container-light);
-  --color-on-tertiary-container: var(--color-on-tertiary-container-light);
-  --color-error: var(--color-error-light);
-  --color-on-error: var(--color-on-error-light);
-  --color-error-container: var(--color-error-container-light);
-  --color-on-error-container: var(--color-on-error-container-light);
-  --color-background: var(--color-background-light);
-  --color-on-background: var(--color-on-background-light);
-  --color-surface: var(--color-surface-light);
-  --color-on-surface: var(--color-on-surface-light);
-  --color-outline: var(--color-outline-light);
-  --color-outline-variant: var(--color-outline-variant-light);
-  --color-inverse-surface: var(--color-inverse-surface-light);
-  --color-inverse-on-surface: var(--color-inverse-on-surface-light);
-  --color-inverse-primary: var(--color-inverse-primary-light);
-  --color-surface-container-lowest: var(--color-surface-container-lowest-light);
-  --color-surface-container-low: var(--color-surface-container-low-light);
-  --color-surface-container: var(--color-surface-container-light);
-  --color-surface-container-high: var(--color-surface-container-high-light);
-  --color-surface-container-highest: var(--color-surface-container-highest-light);
+    --color-on-primary: var(--color-on-primary-light);
+    --color-primary-container: var(--color-primary-container-light);
+    --color-on-primary-container: var(--color-on-primary-container-light);
+    --color-secondary: var(--color-secondary-light);
+    --color-on-secondary: var(--color-on-secondary-light);
+    --color-secondary-container: var(--color-secondary-container-light);
+    --color-on-secondary-container: var(--color-on-secondary-container-light);
+    --color-tertiary: var(--color-tertiary-light);
+    --color-on-tertiary: var(--color-on-tertiary-light);
+    --color-tertiary-container: var(--color-tertiary-container-light);
+    --color-on-tertiary-container: var(--color-on-tertiary-container-light);
+    --color-error: var(--color-error-light);
+    --color-on-error: var(--color-on-error-light);
+    --color-error-container: var(--color-error-container-light);
+    --color-on-error-container: var(--color-on-error-container-light);
+    --color-background: var(--color-background-light);
+    --color-on-background: var(--color-on-background-light);
+    --color-surface: var(--color-surface-light);
+    --color-on-surface: var(--color-on-surface-light);
+    --color-outline: var(--color-outline-light);
+    --color-outline-variant: var(--color-outline-variant-light);
+    --color-inverse-surface: var(--color-inverse-surface-light);
+    --color-inverse-on-surface: var(--color-inverse-on-surface-light);
+    --color-inverse-primary: var(--color-inverse-primary-light);
+    --color-surface-container-lowest: var(--color-surface-container-lowest-light);
+    --color-surface-container-low: var(--color-surface-container-low-light);
+    --color-surface-container: var(--color-surface-container-light);
+    --color-surface-container-high: var(--color-surface-container-high-light);
+    --color-surface-container-highest: var(--color-surface-container-highest-light);
   }
 }
