@@ -154,6 +154,7 @@ const {
     },
   ],
 } = defineProps<{
+  type: 'athletes' | 'artists' | 'communityLeaders' | 'environmentalStewards' | 'scholars'
   athletes: Array<Student>
   artists: Array<Student>
   communityLeaders: Array<Student>
@@ -164,8 +165,20 @@ const {
 
 <template>
   <Layout>
-    <main class="grid col-3">
-      <Card v-for="item in items" :key="item" />
+    <main v-if="type === 'athletes'" class="grid col-3">
+      <Card v-for="student in athletes" :key="student" />
+    </main>
+    <main v-else-if="type === 'artists'" class="grid col-3">
+      <Card v-for="student in artists" :key="student" />
+    </main>
+    <main v-else-if="type === 'communityLeaders'" class="grid col-3">
+      <Card v-for="student in communityLeaders" :key="student" />
+    </main>
+    <main v-else-if="type === 'environmentalStewards'" class="grid col-3">
+      <Card v-for="student in environmentalStewards" :key="student" />
+    </main>
+    <main v-else-if="type === 'scholars'" class="grid col-3">
+      <Card v-for="student in scholars" :key="student" />
     </main>
   </Layout>
 </template>
