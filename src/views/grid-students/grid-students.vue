@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { EaCardStudent, EaLayout } from 'components'
-import { Students } from 'types'
+import { EaCardStudent, EaLayout } from '@/components'
+import type { Student } from '@/types'
 const { students } = defineProps<{
-  students: Array<Students>
+  students: Student[]
 }>()
 </script>
 
@@ -10,12 +10,7 @@ const { students } = defineProps<{
   <ea-layout>
     <div class="stack justify-center">
       <section class="grid grid-3 gap-m">
-        <ea-card-student
-          v-bind="student"
-          v-for="(student, index) in students"
-          :key="index"
-          :cardHref="`/profile/${student.name.toLowerCase().replace(/\s+/g, '-')}`"
-        />
+        <ea-card-student v-for="(student, index) in students" :key="index" v-bind="student" />
       </section>
     </div>
   </ea-layout>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { EaIcon, EaDialog } from 'components'
-import QRCode from '@assets/img/qr-code.png'
+import { EaIcon, EaDialog } from '@/components'
+import QRCode from '@/assets/img/qr-code.png'
 </script>
 
 <template>

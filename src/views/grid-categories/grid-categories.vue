@@ -1,26 +1,16 @@
 <script setup lang="ts">
-import { EaCardCategory, EaLayout } from 'components'
-import { Category } from 'types'
+import { EaCardCategory, EaLayout } from '@/components'
+import type { Category } from '@/types'
 
 defineProps<{
-  categories: Array<Category>
+  categories: Category[]
 }>()
 </script>
 
 <template>
   <ea-layout>
     <section class="grid center grid-3 gap-m">
-      <ea-card-category
-        v-for="(category, index) in categories"
-        :key="index"
-        :imageSrc="category.img"
-        :headline="category.name"
-        :cardHref="
-          category.variant === 'awards'
-            ? `/awards`
-            : `/students/${category.name.toLowerCase().replace(/\s+/g, '-')}`
-        "
-      />
+      <ea-card-category v-for="(category, index) in categories" :key="index" v-bind="category" />
     </section>
   </ea-layout>
 </template>

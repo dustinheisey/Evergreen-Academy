@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { EaIcon } from 'components'
-import type { Icons } from 'types'
+import { EaIcon } from '@/components'
+import type { Icon } from '@/types'
 import { computed } from 'vue'
 
 const {
@@ -11,7 +11,7 @@ const {
   href,
 } = defineProps<{
   variant?: 'primary' | 'secondary' | 'tertiary' | 'icon' | 'icon-subtle'
-  icon?: Icons
+  icon?: Icon
   label?: string
   size?: 's' | 'm' | 'l'
   href?: string

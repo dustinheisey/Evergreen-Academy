@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { EaBtn } from 'components'
-import type { Icons } from 'types'
+import { EaBtn } from '@/components'
+import type { Icon } from '@/types'
 
 const modal = ref<HTMLDialogElement | null>(null)
 
@@ -12,7 +12,7 @@ const {
 } = defineProps<{
   title: string
   btnVariant?: 'primary' | 'secondary' | 'tertiary' | 'icon' | 'icon-subtle'
-  icon?: Icons
+  icon?: Icon
   btnLabel?: string
 }>()
 

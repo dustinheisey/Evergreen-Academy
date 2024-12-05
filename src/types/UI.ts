@@ -1,0 +1,17 @@
+export type Theme = 'primary' | 'secondary' | 'tertiary' | 'surface' | 'error'
+
+export type Icon =
+  | 'accessibility'
+  | 'back'
+  | 'qr-code'
+  | 'close'
+  | 'down'
+  | 'search'
+  | 'menu'
+  | 'world'
+  | 'camera'
+  | 'art'
+  | 'environment'
+  | 'speaking'
+  | 'trophy'
+  | 'writing'

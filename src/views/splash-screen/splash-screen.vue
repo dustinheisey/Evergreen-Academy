@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { EaBtn, EaDialogQrCode, EaDialogAccessibility } from 'components'
-import Logo from '@assets/img/logo.svg'
+import { EaBtn, EaDialogQrCode, EaDialogAccessibility } from '@/components'
+import Logo from '@/assets/img/logo.svg'
 // import VideoWebm from '@/assets/video/evergreen-academy.webm'
 import VideoMp4 from '@/assets/video/evergreen-academy.mp4'
 

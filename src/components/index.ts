@@ -1,31 +1,14 @@
-import EaBackBtn from '@components/ea-back-btn/ea-back-btn.vue'
-import EaBtn from '@components/ea-btn/ea-btn.vue'
-import EaBtnGroup from '@components/ea-btn-group/ea-btn-group.vue'
-import EaCardCategory from '@components/ea-card-category/ea-card-category.vue'
-import EaCardStudent from '@components/ea-card-student/ea-card-student.vue'
-import EaCardAward from '@components/ea-card-award/ea-card-award.vue'
-import EaThemeSwitch from '@components/ea-theme-switch/ea-theme-switch.vue'
-import EaDialog from '@components/ea-dialog/ea-dialog.vue'
-import EaDialogAccessibility from '@components/ea-dialog-accessibility/ea-dialog-accessibility.vue'
-import EaDialogQrCode from '@components/ea-dialog-qr-code/ea-dialog-qr-code.vue'
-import EaIcon from '@components/ea-icon/ea-icon.vue'
-import EaLayout from '@components/ea-layout/ea-layout.vue'
-import EaProfileText from '@components/ea-profile-text/ea-profile-text.vue'
-import EaRangeInput from '@components/ea-range-input/ea-range-input.vue'
-
-export {
-  EaBackBtn,
-  EaBtn,
-  EaBtnGroup,
-  EaCardCategory,
-  EaCardStudent,
-  EaCardAward,
-  EaThemeSwitch,
-  EaDialog,
-  EaDialogAccessibility,
-  EaDialogQrCode,
-  EaIcon,
-  EaLayout,
-  EaProfileText,
-  EaRangeInput,
-}
+export { default as EaBackBtn } from '@/components/ea-back-btn/ea-back-btn.vue'
+export { default as EaBtn } from '@/components/ea-btn/ea-btn.vue'
+export { default as EaBtnGroup } from '@/components/ea-btn-group/ea-btn-group.vue'
+export { default as EaCardCategory } from '@/components/ea-card-category/ea-card-category.vue'
+export { default as EaCardStudent } from '@/components/ea-card-student/ea-card-student.vue'
+export { default as EaCardAward } from '@/components/ea-card-award/ea-card-award.vue'
+export { default as EaThemeSwitch } from '@/components/ea-theme-switch/ea-theme-switch.vue'
+export { default as EaDialog } from '@/components/ea-dialog/ea-dialog.vue'
+export { default as EaDialogAccessibility } from '@/components/ea-dialog-accessibility/ea-dialog-accessibility.vue'
+export { default as EaDialogQrCode } from '@/components/ea-dialog-qr-code/ea-dialog-qr-code.vue'
+export { default as EaIcon } from '@/components/ea-icon/ea-icon.vue'
+export { default as EaLayout } from '@/components/ea-layout/ea-layout.vue'
+export { default as EaProfileText } from '@/components/ea-profile-text/ea-profile-text.vue'
+export { default as EaRangeInput } from '@/components/ea-range-input/ea-range-input.vue'

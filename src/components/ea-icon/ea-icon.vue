@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { defineAsyncComponent } from 'vue'
-import type { Icons } from 'types'
+import type { Icon } from '@/types'
 
 const {
   name,
   size = 'm',
   variant,
 } = defineProps<{
-  name: Icons
+  name: Icon
   size?: 's' | 'm' | 'l' | 'xl'
   variant?: 'primary' | 'secondary' | 'tertiary' | 'error' | 'surface' | 'inverse'
 }>()

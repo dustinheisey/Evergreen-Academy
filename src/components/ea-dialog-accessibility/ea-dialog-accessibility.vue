@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
 import { useThemeStore, useFontSizeStore, useZoomStore } from '@/stores/accessibility'
-import { EaDialog, EaThemeSwitch, EaRangeInput } from 'components'
+import { EaDialog, EaThemeSwitch, EaRangeInput } from '@/components'
 
 const themeStore = useThemeStore()
 const fontSizeStore = useFontSizeStore()

@@ -1,29 +1,16 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
-import type { Icons } from 'types'
-import { EaIcon } from 'components'
+import type { Award } from '@/types'
+import { EaIcon } from '@/components'
 
-defineProps<{
-  variant?: 'student' | 'award'
-  icon?: Icons
-  headline?: string
-  subHeadline?: string
-  years?: Array<string>
-  year?: string
-  team?: string
-  activity?: string
-  cardHref?: string
-}>()
+defineProps<Award>()
 </script>
 
 <template>
-  <component
-    :is="cardHref ? 'router-link' : 'article'"
-    :to="cardHref"
-    :class="['theme-' + variant, 'card', 'card-award', 'stack', 'gap-s', 'inset-m', 'align-center']"
+  <article
+    :class="['theme-' + theme, 'card', 'card-award', 'stack', 'gap-s', 'inset-m', 'align-center']"
   >
     <ea-icon class="award-icon" :name="icon" size="xl" variant="primary"></ea-icon>
-    <h3 class="color-primary text-center split">{{ headline }}</h3>
+    <h3 class="color-primary text-center split">{{ name }}</h3>
     <section class="stack gap-2xs align-center">
       <p class="overline">Championships</p>
       <p class="cluster gap-2xs justify-center">
@@ -32,7 +19,7 @@ defineProps<{
         </span>
       </p>
     </section>
-  </component>
+  </article>
 </template>
 
 <style scoped lang="scss">

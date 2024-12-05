@@ -1,29 +1,14 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
+import type { Category } from '@/types'
+import { RouterLink } from 'vue-router'
 
-defineProps<{
-  variant?: 'student' | 'award'
-  imageSrc?: string
-  imageAlt?: string
-  headline?: string
-  subHeadline?: string
-  years?: Array<string>
-  year?: string
-  team?: string
-  activity?: string
-  cardHref?: string
-}>()
+defineProps<Category>()
 </script>
 
 <template>
-  <component
-    :is="cardHref ? 'router-link' : 'article'"
-    :to="cardHref"
-    class="card"
-    :aria-label="headline"
-  >
-    <img v-if="imageSrc" :src="imageSrc" :alt="imageAlt" />
-  </component>
+  <router-link :to="awards ? '/awards' : `/students/${slug}`" class="card" :aria-label="name">
+    <img :src="`/img/categories/${slug}.png`" :alt="name" />
+  </router-link>
 </template>
 
 <style scoped lang="scss">

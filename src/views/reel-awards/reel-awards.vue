@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import type { Award } from 'types'
-import EaCardAward from '@/components/ea-card-award/ea-card-award.vue'
-import EaLayout from '@components/ea-layout/ea-layout.vue'
+import type { Award } from '@/types'
+import { EaCardAward, EaLayout } from '@/components'
 
 defineProps<{
   awards: Array<Award>
@@ -12,14 +11,7 @@ defineProps<{
   <ea-layout>
     <div class="stack justify-center">
       <section class="reel center gap-l">
-        <ea-card-award
-          v-for="(award, index) in awards"
-          :variant="award.variant"
-          :key="index"
-          :icon="award.icon"
-          :headline="award.headline"
-          :years="award.years"
-        ></ea-card-award>
+        <ea-card-award v-for="(award, index) in awards" v-bind="award" :key="index"></ea-card-award>
       </section>
     </div>
   </ea-layout>

@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import SplashScreen from '@views/splash-screen/splash-screen.vue'
+import SplashScreen from '@/views/splash-screen/splash-screen.vue'
 import data from '@/data.json'
-import type { Category, Student } from 'types'
+import type { Category, Student } from '../types'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,20 +20,18 @@ const router = createRouter({
       }),
     },
     ...data.categories.map((category: Category) => ({
-      path: `/students/${category.name.toLowerCase().replace(/\s+/g, '-')}`,
+      path: `/students/${category.slug}`,
       name: `${category.name} Students`,
       component: () => import('@/views/grid-students/grid-students.vue'),
       props: () => ({
-        students: data.students.filter(
-          (student: Student) => student.activity === category.activity,
-        ),
+        students: data.students.filter((student) => student.category === category.slug),
       }),
     })),
     ...data.students.map((student: Student) => ({
-      path: `/profile/${student.name.toLowerCase().replace(/\s+/g, '-')}`,
-      name: student.name,
+      path: `/profile/${student.slug}`,
+      name: student.slug,
       component: () => import('@/views/profile-simple/profile-simple.vue'),
-      props: () => ({ ...student }),
+      props: () => student,
     })),
     {
       path: '/awards',

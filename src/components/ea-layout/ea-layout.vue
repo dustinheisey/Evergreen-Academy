@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
-import Logo from '@assets/img/logo.svg'
-import { EaBtn, EaBackBtn, EaDialogQrCode, EaDialogAccessibility } from 'components'
+import Logo from '@/assets/img/logo.svg'
+import { EaBtn, EaBackBtn, EaDialogQrCode, EaDialogAccessibility } from '@/components'
 
 const showHeader = computed(() => !window.matchMedia('(max-width: 760px)').matches)
 const mobile = computed(() => window.matchMedia('(max-width: 640px)').matches)

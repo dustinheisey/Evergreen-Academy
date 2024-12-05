@@ -1,12 +1,7 @@
 <script setup lang="ts">
-defineProps<{
-  name: string
-  year: string
-  activity: string
-  team: string
-  intro: string
-  description: string
-}>()
+import type { Student } from '@/types'
+
+defineProps<Student>()
 </script>
 
 <template>
@@ -19,7 +14,7 @@ defineProps<{
       </div>
       <div class="stack">
         <p class="overline">Activity</p>
-        <p class="color-primary">{{ activity }}</p>
+        <p class="color-primary">{{ category.charAt(0).toUpperCase() + category.slice(1) }}</p>
       </div>
       <div class="stack">
         <p class="overline">Team</p>
