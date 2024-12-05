@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { EaIcon } from 'components'
-import type { Icons } from 'components'
+import type { Icons } from 'types'
 import { computed } from 'vue'
 
 const {

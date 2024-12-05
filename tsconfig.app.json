@@ -12,7 +12,8 @@
       "@router/*": ["./src/router/*"],
       "@stores/*": ["./src/stores/*"],
       "@views/*": ["./src/views/*"],
-      "components": ["./src/components/index.ts"]
+      "components": ["./src/components/index.ts"],
+      "types": ["./src/types/index.ts"]
     }
   }
 }

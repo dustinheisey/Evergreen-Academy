@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { EaBtn } from 'components'
-import type { Icons } from 'components'
+import type { Icons } from 'types'
 
 const modal = ref<HTMLDialogElement | null>(null)
 

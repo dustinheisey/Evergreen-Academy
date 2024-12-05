@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { defineProps } from 'vue'
-import type { Icons } from 'components'
+import type { Icons } from 'types'
 import { EaIcon } from 'components'
 
 // Props definition

@@ -1,7 +1,7 @@
 import EaBackBtn from '@components/ea-back-btn/ea-back-btn.vue'
 import EaBtn from '@components/ea-btn/ea-btn.vue'
 import EaBtnGroup from '@components/ea-btn-group/ea-btn-group.vue'
-import EaCardGroup from '@components/ea-card-group/ea-card-group.vue'
+import EaCardCategory from '@components/ea-card-category/ea-card-category.vue'
 import EaCardStudent from '@components/ea-card-student/ea-card-student.vue'
 import EaCardAward from '@components/ea-card-award/ea-card-award.vue'
 import EaThemeSwitch from '@components/ea-theme-switch/ea-theme-switch.vue'
@@ -13,13 +13,11 @@ import EaLayout from '@components/ea-layout/ea-layout.vue'
 import EaProfileText from '@components/ea-profile-text/ea-profile-text.vue'
 import EaRangeInput from '@components/ea-range-input/ea-range-input.vue'
 
-import type { Icons } from '@components/component-types.ts'
-
 export {
   EaBackBtn,
   EaBtn,
   EaBtnGroup,
-  EaCardGroup,
+  EaCardCategory,
   EaCardStudent,
   EaCardAward,
   EaThemeSwitch,
@@ -31,5 +29,3 @@ export {
   EaProfileText,
   EaRangeInput,
 }
-
-export type { Icons }
