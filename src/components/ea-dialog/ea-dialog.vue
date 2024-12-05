@@ -35,9 +35,15 @@ const closeModal = (): void => {
   }}</ea-btn>
   <dialog class="modal inset-s theme-surface" @close="closeModal" ref="modal" data-modal>
     <section class="stack gap-2xs">
-      <div class="cluster justify-between">
+      <div class="sidebar justify-between">
         <h2 class="color-primary">{{ title }}</h2>
-        <ea-btn variant="icon-subtle" icon="close" @click="closeModal" aria-label="Close"></ea-btn>
+        <ea-btn
+          class="fixed"
+          variant="icon-subtle"
+          icon="close"
+          @click="closeModal"
+          aria-label="Close"
+        ></ea-btn>
       </div>
       <hr />
       <slot></slot>

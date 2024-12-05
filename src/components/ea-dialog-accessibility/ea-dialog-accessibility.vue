@@ -52,15 +52,15 @@ onMounted(applyAccessibility)
       <ea-range-input
         label="Adjust Base Font Size"
         min="12"
-        max="32"
+        max="24"
         :value="16"
         :output="fontSizeStore.fontSizeFormatted"
         @update-value="updateFontSize"
       ></ea-range-input>
       <ea-range-input
         label="Zoom View"
-        min="50"
-        max="200"
+        min="75"
+        max="150"
         :value="100"
         :output="zoomStore.zoomFormatted"
         @update-value="updateZoom"

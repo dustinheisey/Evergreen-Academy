@@ -5,8 +5,8 @@ import { EaBtn, EaBackBtn, EaDialogQrCode, EaDialogAccessibility } from 'compone
 </script>
 
 <template>
-  <div class="cover gap-s inset-s">
-    <header class="cluster justify-between header inset-0">
+  <div class="cover gap-s inset-m">
+    <header class="cluster justify-between header">
       <RouterLink to="/" class="cluster gap-xs">
         <Logo class="logo" />
         <h2 class="color-primary">Evergreen Academy</h2>
@@ -28,10 +28,10 @@ import { EaBtn, EaBackBtn, EaDialogQrCode, EaDialogAccessibility } from 'compone
 
 <style lang="scss" scoped>
 .cover {
-  block-size: 100vh;
+  block-size: 100%;
 }
 .logo {
-  inline-size: 7rem;
+  inline-size: 5rem;
   block-size: auto;
   vertical-align: middle;
 }
