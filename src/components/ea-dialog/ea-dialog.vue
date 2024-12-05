@@ -33,7 +33,7 @@ const closeModal = (): void => {
   <ea-btn :variant="btnVariant" :icon="icon" @click="showModal" :aria-label="title">{{
     btnLabel
   }}</ea-btn>
-  <dialog class="modal inset-s" @close="closeModal" ref="modal" data-modal>
+  <dialog class="modal inset-s theme-surface" @close="closeModal" ref="modal" data-modal>
     <section class="stack gap-2xs">
       <div class="cluster justify-between">
         <h2 class="color-primary">{{ title }}</h2>

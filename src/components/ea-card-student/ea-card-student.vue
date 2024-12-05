@@ -18,7 +18,7 @@ const props = defineProps<{
 
 <template>
   <component :is="cardHref ? 'router-link' : 'article'" :to="cardHref" class="card">
-    <div class="frame vertical-s">
+    <div class="frame">
       <img v-if="imageSrc" :src="imageSrc" :alt="imageAlt" />
     </div>
     <section class="student-info stack gap-0 inset-m align-center">
@@ -33,19 +33,14 @@ const props = defineProps<{
 
 <style scoped lang="scss">
 .card {
-  box-shadow: var(--shadow-m);
+  box-shadow: var(--shadow-s);
   border-radius: var(--radius-l);
-  position: relative;
-  display: inline-block;
-  box-shadow: var(--shadow-m);
-  border-radius: var(--radius-l);
-  overflow: hidden;
   transition:
     box-shadow 0.2s ease-in-out,
     transform 0.2s ease-in-out;
 
   &:hover {
-    box-shadow: var(--shadow-l);
+    box-shadow: var(--shadow-m);
   }
 }
 

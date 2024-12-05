@@ -57,6 +57,6 @@ const icon = defineAsyncComponent(() => import(`../../assets/icons/${name}.svg`)
   --size: 2rem;
 }
 .icon-xl {
-  --size: 3rem;
+  --size: 6rem;
 }
 </style>

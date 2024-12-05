@@ -43,5 +43,6 @@ h1 {
 main {
   overflow-y: scroll;
   max-block-size: 100vh;
+  flex-grow: 1;
 }
 </style>
