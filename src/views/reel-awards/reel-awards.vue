@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import type { Icons } from 'components'
 import EaCardAward from '@/components/ea-card-award/ea-card-award.vue'
-// TODO: award card template vue router dynamic groups, layout arrangement
+import EaLayout from '@components/ea-layout/ea-layout.vue'
+
+// TODO: vue router dynamic groups
 
 type Award = {
   icon: Icons
@@ -47,16 +49,20 @@ const {
 </script>
 
 <template>
-  <section class="reel gap-l">
-    <ea-card-award
-      v-for="(award, index) in awards"
-      :variant="award.variant"
-      :key="index"
-      :icon="award.icon"
-      :headline="award.headline"
-      :years="award.years"
-    ></ea-card-award>
-  </section>
+  <ea-layout>
+    <div class="stack justify-center">
+      <section class="reel center gap-l">
+        <ea-card-award
+          v-for="(award, index) in awards"
+          :variant="award.variant"
+          :key="index"
+          :icon="award.icon"
+          :headline="award.headline"
+          :years="award.years"
+        ></ea-card-award>
+      </section>
+    </div>
+  </ea-layout>
 </template>
 
 <style scoped lang="scss">
@@ -64,5 +70,10 @@ const {
   padding-block: var(--space-l);
   padding-left: var(--space-xs); /* 4px for the offset + some buffer */
   scroll-padding-left: var(--space-xs); /* For snapping if scroll-snap is used */
+  max-inline-size: 1200px;
+}
+
+.stack {
+  block-size: 100%;
 }
 </style>

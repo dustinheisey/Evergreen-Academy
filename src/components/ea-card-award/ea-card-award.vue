@@ -43,14 +43,19 @@ const props = defineProps<{
   padding: var(--space-m);
   border: 4px solid var(--color-on-primary);
 }
+
 .card {
-  box-shadow: var(--shadow-m);
+  box-shadow: var(--shadow-s);
   border-radius: var(--radius-l);
   transition:
     box-shadow 0.2s ease-in-out,
     transform 0.2s ease-in-out;
   outline: 4px solid var(--color-surface);
   outline-offset: 5px;
+
+  &:hover {
+    box-shadow: var(--shadow-m);
+  }
 }
 
 img {

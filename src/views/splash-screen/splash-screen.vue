@@ -3,7 +3,6 @@ import { EaBtn, EaDialogQrCode, EaDialogAccessibility } from 'components'
 import Logo from '@assets/img/logo.svg'
 // import VideoWebm from '@/assets/video/evergreen-academy.webm'
 import VideoMp4 from '@/assets/video/evergreen-academy.mp4'
-// TODO: layout arrangement
 </script>
 
 <template>

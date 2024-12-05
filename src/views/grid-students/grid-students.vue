@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// TODO: layout arrangement, vue router link card
+// TODO: vue router link card
 import { EaCardStudent, EaLayout } from 'components'
 import AidenRoberts from '@assets/img/students/aiden-roberts.jpg'
 import AmaraLee from '@assets/img/students/amara-lee.jpg'
