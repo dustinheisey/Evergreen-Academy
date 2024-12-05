@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import SplashScreen from '../views/splash-screen/splash-screen.vue'
-import GridCategories from '../views/grid-groups/grid-groups.vue'
-import GridStudents from '../views/grid-students/grid-students.vue'
-import ProfileSimple from '../views/profile-simple/profile-simple.vue'
+import SplashScreen from '@views/splash-screen/splash-screen.vue'
+import GridGroups from '@views/grid-groups/grid-groups.vue'
+import GridStudents from '@views/grid-students/grid-students.vue'
+import ProfileSimple from '@views/profile-simple/profile-simple.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,9 +13,9 @@ const router = createRouter({
       component: SplashScreen,
     },
     {
-      path: '/categories',
-      name: 'categories',
-      component: GridCategories,
+      path: '/groups',
+      name: 'groups',
+      component: GridGroups,
     },
     {
       path: '/students',

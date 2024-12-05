@@ -1,4 +1,18 @@
 <script setup lang="ts">
+// TODO: layout arrangement, vue router link card, image card template
+import { EaCardStudent } from 'components'
+import AidenRoberts from '@assets/img/students/aiden-roberts.jpg'
+import AmaraLee from '@assets/img/students/amara-lee.jpg'
+import ChloeMartin from '@assets/img/students/chloe-martin.jpg'
+import EmilyCarter from '@assets/img/students/emily-carter.jpg'
+import JordanSmith from '@assets/img/students/jordan-smith.jpg'
+import LiamGarcia from '@assets/img/students/liam-garcia.jpg'
+import LiamPatel from '@assets/img/students/liam-patel.jpg'
+import NoahAdams from '@assets/img/students/noah-adams.jpg'
+import RyanNguyen from '@assets/img/students/ryan-nguyen.jpg'
+import SophiaBennett from '@assets/img/students/sophia-bennett.jpg'
+import SophiaHernandez from '@assets/img/students/sophia-hernandez.jpg'
+
 type Student = {
   name: string
   year: string
@@ -10,6 +24,7 @@ type Student = {
 const {
   athletes = [
     {
+      img: JordanSmith,
       name: 'Jordan Smith',
       year: '2024',
       activity: 'sports',
@@ -19,6 +34,7 @@ const {
         'As captain, Jordan led the team to the state championships in 2024, showcasing exceptional leadership both on and off the field. Known for their agility and strategic gameplay, Jordan has become a role model for younger players, inspiring teamwork and determination across the team.',
     },
     {
+      img: EmilyCarter,
       name: 'Emily Carter',
       year: '2023',
       activity: 'sports',
@@ -28,6 +44,7 @@ const {
         'Emily’s record-breaking performance at the regional meet secured her position as one of the top sprinters in the state. Her dedication to rigorous training and her ability to balance academics with athletics make her an exemplary student-athlete.',
     },
     {
+      img: RyanNguyen,
       name: 'Ryan Nguyen',
       year: '2025',
       activity: 'sports',
@@ -39,6 +56,7 @@ const {
   ],
   artists = [
     {
+      img: SophiaHernandez,
       name: 'Sophia Hernandez',
       year: '2024',
       activity: 'art',
@@ -48,6 +66,7 @@ const {
         'Sophia’s murals have transformed the campus walls into vibrant stories of community and hope. Her artistic vision not only beautifies the environment but also highlights themes of diversity and inclusion.',
     },
     {
+      img: LiamPatel,
       name: 'Liam Patel',
       year: '2023',
       activity: 'art',
@@ -57,6 +76,7 @@ const {
         'Liam’s commanding stage presence brought the character of Jean Valjean to life in the school’s rendition of *Les Misérables*. Beyond acting, Liam is deeply involved in set design and encourages others to explore their theatrical talents.',
     },
     {
+      img: AmaraLee,
       name: 'Amara Lee',
       year: '2025',
       activity: 'art',
@@ -68,6 +88,7 @@ const {
   ],
   communityLeaders = [
     {
+      img: AidenRoberts,
       name: 'Aiden Roberts',
       year: '2023',
       activity: 'leaders',
@@ -76,27 +97,10 @@ const {
       description:
         'During his tenure, Aiden implemented initiatives to improve mental health resources and enhance communication between students and staff. His leadership has left a lasting legacy of inclusivity and progress.',
     },
-    {
-      name: 'Maya Johnson',
-      year: '2024',
-      activity: 'leaders',
-      team: 'Debate Team',
-      intro: 'Maya is a regional debate champion.',
-      description:
-        'With her persuasive arguments and in-depth research, Maya secured the regional debate title for Evergreen Academy. She mentors new team members and encourages them to find their voice in public speaking.',
-    },
-    {
-      name: 'Ethan Kim',
-      year: '2025',
-      activity: 'leaders',
-      team: 'Volunteer Club',
-      intro: 'Ethan led a major food drive for the local community.',
-      description:
-        'Ethan organized a school-wide food drive that collected over 5,000 meals for families in need. His ability to inspire participation highlights his genuine passion for community service and teamwork.',
-    },
   ],
   environmentalStewards = [
     {
+      img: ChloeMartin,
       name: 'Chloe Martin',
       year: '2024',
       activity: 'environmental',
@@ -106,6 +110,7 @@ const {
         'Chloe’s passion for sustainability led her to create a club dedicated to reducing the school’s carbon footprint. Her initiatives include tree planting, waste reduction programs, and eco-education workshops for students.',
     },
     {
+      img: NoahAdams,
       name: 'Noah Adams',
       year: '2023',
       activity: 'environmental',
@@ -114,27 +119,10 @@ const {
       description:
         'By implementing new collection systems and educating students about proper recycling practices, Noah doubled the school’s recycling rate. His efforts have become a model for other schools in the district.',
     },
-    {
-      name: 'Olivia Torres',
-      year: '2025',
-      activity: 'environmental',
-      team: 'Greenhouse Project',
-      intro: 'Olivia manages the school’s greenhouse.',
-      description:
-        'Olivia’s leadership of the greenhouse project has provided fresh produce for the cafeteria and hands-on learning experiences for science students. Her dedication to sustainable agriculture is inspiring future environmentalists.',
-    },
   ],
   scholars = [
     {
-      name: 'Isabella Cruz',
-      year: '2023',
-      activity: 'scholarship',
-      team: 'Math Olympiad Team',
-      intro: 'Isabella won first place at the National Math Olympiad.',
-      description:
-        'Isabella’s mathematical prowess has earned her national recognition. Her logical thinking and problem-solving skills have inspired peers to strive for excellence in STEM fields.',
-    },
-    {
+      img: LiamGarcia,
       name: 'Liam Garcia',
       year: '2024',
       activity: 'scholarship',
@@ -144,6 +132,7 @@ const {
         'Liam’s robotics project, focusing on AI-driven prosthetics, won first place at the state science fair. His innovative work bridges technology and compassion, addressing real-world challenges.',
     },
     {
+      img: SophiaBennett,
       name: 'Sophia Bennett',
       year: '2025',
       activity: 'scholarship',
@@ -162,25 +151,24 @@ const {
   scholars: Array<Student>
 }>()
 </script>
-
 <template>
-  <Layout>
-    <main v-if="type === 'athletes'" class="grid col-3">
-      <Card v-for="student in athletes" :key="student" />
-    </main>
-    <main v-else-if="type === 'artists'" class="grid col-3">
-      <Card v-for="student in artists" :key="student" />
-    </main>
-    <main v-else-if="type === 'communityLeaders'" class="grid col-3">
-      <Card v-for="student in communityLeaders" :key="student" />
-    </main>
-    <main v-else-if="type === 'environmentalStewards'" class="grid col-3">
-      <Card v-for="student in environmentalStewards" :key="student" />
-    </main>
-    <main v-else-if="type === 'scholars'" class="grid col-3">
-      <Card v-for="student in scholars" :key="student" />
-    </main>
-  </Layout>
+  <section class="grid center grid-3 gap-m">
+    <ea-card-student
+      v-for="(athlete, index) in athletes"
+      :key="index"
+      :imageSrc="athlete.img"
+      :headline="athlete.name"
+      :name="athlete.name"
+      :year="athlete.year"
+      :activity="athlete.activity"
+      :team="athlete.team"
+      :cardHref="`/profile/${athlete.name}`"
+    ></ea-card-student>
+  </section>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.grid {
+  max-inline-size: 1200px;
+}
+</style>
