@@ -6,5 +6,5 @@ const router = useRouter()
 </script>
 
 <template>
-  <ea-btn @click="() => router.back()" icon="back"> </ea-btn>
+  <ea-btn @click="() => router.back()" variant="icon" icon="back"></ea-btn>
 </template>

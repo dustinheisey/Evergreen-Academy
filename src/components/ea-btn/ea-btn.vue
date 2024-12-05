@@ -34,7 +34,7 @@ const classes = computed(() => ['btn', 'btn-' + variant, 'gap-xs'])
 .btn-icon {
   background: var(--color-surface-container-high);
   border-color: var(--color-surface-container-high);
-  color: var(--color-on-surface);
+  color: var(--color-primary);
   padding: var(--space-xs);
 }
 

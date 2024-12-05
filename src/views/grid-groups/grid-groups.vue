@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { EaCardGroup } from 'components'
+import { EaCardGroup, EaLayout } from 'components'
 import Athletes from '@assets/img/groups/athletes.png'
 import Artists from '@assets/img/groups/artists.png'
 import CommunityLeaders from '@assets/img/groups/community-leaders.png'
 import EnvironmentalStewards from '@assets/img/groups/environmental-stewards.png'
 import Scholars from '@assets/img/groups/scholars.png'
 import Awards from '@assets/img/groups/awards.png'
-// TODO: layout arrangement, vue router link card, image card template
+// TODO: vue router link card
 
 const {
   groups = [
@@ -41,18 +41,21 @@ const {
 </script>
 
 <template>
-  <section class="grid center grid-3 gap-m">
-    <ea-card-group
-      v-for="(group, index) in groups"
-      :key="index"
-      :imageSrc="group.img"
-      :headline="group.group"
-    />
-  </section>
+  <ea-layout>
+    <section class="grid center grid-3 gap-m">
+      <ea-card-group
+        v-for="(group, index) in groups"
+        :key="index"
+        :imageSrc="group.img"
+        :headline="group.group"
+      />
+    </section>
+  </ea-layout>
 </template>
 
 <style scoped lang="scss">
 .grid {
-  max-inline-size: 1200px;
+  max-inline-size: 950px;
+  padding-block: var(--space-2xs);
 }
 </style>
