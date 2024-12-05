@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import EaDialog from '../ea-dialog/ea-dialog.vue'
-import EaDarkModeToggle from '../ea-dark-mode-toggle/ea-dark-mode-toggle.vue'
-import EaRangeInput from '../ea-range-input/ea-range-input.vue'
+import { EaDialog, EaDarkModeToggle, EaRangeInput } from 'components'
 </script>
 
 <template>

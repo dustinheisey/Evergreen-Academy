@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { useRouter } from 'vue-router'
-import EaBtn from '../../components/ea-btn/ea-btn.vue'
+import { EaBtn } from 'components'
 
 const router = useRouter()
 </script>

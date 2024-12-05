@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import EaIcon from '../ea-icon/ea-icon.vue'
-import QRCode from '../../assets/img/qr-code.png'
-import EaDialog from '../ea-dialog/ea-dialog.vue'
+import { EaIcon, EaDialog } from 'components'
+import QRCode from '@assets/img/qr-code.png'
 </script>
 
 <template>

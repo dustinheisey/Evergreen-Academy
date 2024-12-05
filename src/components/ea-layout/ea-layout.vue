@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import Logo from '../../assets/img/logo.svg'
-import EaBackBtn from '../../components/ea-back-btn/ea-back-btn.vue'
+import Logo from '@assets/img/logo.svg'
+import { EaBackBtn } from 'components'
 
 const route = useRoute()
 

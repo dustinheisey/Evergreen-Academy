@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { defineAsyncComponent } from 'vue'
-import type { Icons } from '../component-types.ts'
+import type { Icons } from 'components'
 
 const {
   name,

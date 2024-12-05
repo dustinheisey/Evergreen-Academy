@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import EaLayout from './components/ea-layout/ea-layout.vue'
+import { EaLayout } from 'components'
 </script>
 
 <template>

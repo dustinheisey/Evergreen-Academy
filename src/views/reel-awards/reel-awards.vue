@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import type { Icons } from '../../components/component-types.ts'
+import type { Icons } from 'components'
+// TODO: award card template vue router dynamic groups, layout arrangement
 const {
   awards = [
     {

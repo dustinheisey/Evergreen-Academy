@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import EaIcon from '../ea-icon/ea-icon.vue'
-import type { Icons } from '../component-types.ts'
+import { EaIcon } from 'components'
+import type { Icons } from 'components'
 import { computed } from 'vue'
-import { RouterLink } from 'vue-router'
 
 const {
   variant = 'primary',
