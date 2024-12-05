@@ -29,7 +29,7 @@ const router = createRouter({
       component: ReelAwards,
     },
     {
-      path: '/simple-profile',
+      path: '/profile',
       name: 'simple-profile',
       component: ProfileSimple,
     },

@@ -2,7 +2,7 @@
 defineProps<{
   name: string
   year: string
-  sport: string
+  activity: string
   team: string
   intro: string
   description: string
@@ -18,8 +18,8 @@ defineProps<{
         <p class="color-primary">{{ year }}</p>
       </div>
       <div class="stack">
-        <p class="overline">Sport</p>
-        <p class="color-primary">{{ sport }}</p>
+        <p class="overline">Activity</p>
+        <p class="color-primary">{{ activity }}</p>
       </div>
       <div class="stack">
         <p class="overline">Team</p>
