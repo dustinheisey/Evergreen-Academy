@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { defineProps } from 'vue'
 
-// Props definition
-const props = defineProps<{
+defineProps<{
   variant?: 'student' | 'award'
   imageSrc?: string
   imageAlt?: string

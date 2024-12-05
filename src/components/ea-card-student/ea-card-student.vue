@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { defineProps } from 'vue'
 
-// Props definition
 defineProps<{
   img: string
   name: string

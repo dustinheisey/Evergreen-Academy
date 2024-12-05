@@ -3,8 +3,7 @@ import { defineProps } from 'vue'
 import type { Icons } from 'types'
 import { EaIcon } from 'components'
 
-// Props definition
-const props = defineProps<{
+defineProps<{
   variant?: 'student' | 'award'
   icon?: Icons
   headline?: string
