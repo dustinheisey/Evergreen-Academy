@@ -13,7 +13,7 @@ import { EaBtn, EaBackBtn, EaDialogQrCode, EaDialogAccessibility } from 'compone
       </RouterLink>
       <ea-btn variant="icon" icon="search"></ea-btn>
     </header>
-    <main>
+    <main class="center full">
       <slot></slot>
     </main>
     <section class="cluster justify-between btns">
@@ -44,5 +44,6 @@ main {
   overflow-y: scroll;
   max-block-size: 100vh;
   flex-grow: 1;
+  max-inline-size: var(--max-inline-size);
 }
 </style>
