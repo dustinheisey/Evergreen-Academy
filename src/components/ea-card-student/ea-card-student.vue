@@ -2,27 +2,23 @@
 import { defineProps } from 'vue'
 
 // Props definition
-const props = defineProps<{
-  variant?: 'student' | 'award'
-  imageSrc?: string
-  imageAlt?: string
-  headline?: string
-  subHeadline?: string
-  years?: Array<string>
-  year?: string
-  team?: string
-  activity?: string
-  cardHref?: string
+defineProps<{
+  img: string
+  name: string
+  year: string
+  team: string
+  activity: string
+  cardHref: string
 }>()
 </script>
 
 <template>
   <component :is="cardHref ? 'router-link' : 'article'" :to="cardHref" class="card">
     <div class="frame">
-      <img v-if="imageSrc" :src="imageSrc" :alt="imageAlt" />
+      <img :src="img" :alt="name" />
     </div>
-    <section class="student-info stack gap-0 inset-m align-center">
-      <h3 class="color-primary">{{ headline }}</h3>
+    <section class="student-info stack gap-0 inset-m align-center text-center">
+      <h3 class="color-primary">{{ name }}</h3>
       <p class="overline cluster gap-2xs">
         <span>{{ year }}</span
         ><span>|</span><span>{{ team }}</span>
@@ -38,10 +34,6 @@ const props = defineProps<{
   transition:
     box-shadow 0.2s ease-in-out,
     transform 0.2s ease-in-out;
-
-  &:hover {
-    box-shadow: var(--shadow-m);
-  }
 }
 
 img {

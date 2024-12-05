@@ -1,9 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import SplashScreen from '@views/splash-screen/splash-screen.vue'
-import GridGroups from '@views/grid-groups/grid-groups.vue'
-import GridStudents from '@views/grid-students/grid-students.vue'
-import ReelAwards from '@views/reel-awards/reel-awards.vue'
-import ProfileSimple from '@views/profile-simple/profile-simple.vue'
+import data from '@/data.json'
+import type { Category, Student } from 'types'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,24 +12,36 @@ const router = createRouter({
       component: SplashScreen,
     },
     {
-      path: '/groups',
-      name: 'groups',
-      component: GridGroups,
+      path: '/categories',
+      name: 'categories',
+      component: () => import('@/views/grid-categories/grid-categories.vue'),
+      props: () => ({
+        categories: data.categories,
+      }),
     },
-    {
-      path: '/students',
-      name: 'students',
-      component: GridStudents,
-    },
+    ...data.categories.map((category: Category) => ({
+      path: `/students/${category.name.toLowerCase().replace(/\s+/g, '-')}`,
+      name: `${category.name} Students`,
+      component: () => import('@/views/grid-students/grid-students.vue'),
+      props: () => ({
+        students: data.students.filter(
+          (student: Student) => student.activity === category.activity,
+        ),
+      }),
+    })),
+    ...data.students.map((student: Student) => ({
+      path: `/profile/${student.name.toLowerCase().replace(/\s+/g, '-')}`,
+      name: student.name,
+      component: () => import('@/views/profile-simple/profile-simple.vue'),
+      props: () => ({ ...student }),
+    })),
     {
       path: '/awards',
       name: 'awards',
-      component: ReelAwards,
-    },
-    {
-      path: '/profile',
-      name: 'simple-profile',
-      component: ProfileSimple,
+      component: () => import('@/views/reel-awards/reel-awards.vue'),
+      props: () => ({
+        awards: data.awards,
+      }),
     },
   ],
 })

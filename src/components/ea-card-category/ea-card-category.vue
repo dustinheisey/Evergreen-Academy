@@ -17,7 +17,12 @@ const props = defineProps<{
 </script>
 
 <template>
-  <component :is="cardHref ? 'router-link' : 'article'" :to="cardHref" class="card">
+  <component
+    :is="cardHref ? 'router-link' : 'article'"
+    :to="cardHref"
+    class="card"
+    :aria-label="headline"
+  >
     <img v-if="imageSrc" :src="imageSrc" :alt="imageAlt" />
   </component>
 </template>
@@ -29,10 +34,6 @@ const props = defineProps<{
   transition:
     box-shadow 0.2s ease-in-out,
     transform 0.2s ease-in-out;
-
-  &:hover {
-    box-shadow: var(--shadow-m);
-  }
 }
 
 img {
@@ -40,7 +41,7 @@ img {
 }
 
 .card:hover {
-  box-shadow: var(--shadow-l);
+  box-shadow: var(--shadow-m);
   transform: translateY(-5px);
   cursor: pointer;
 }

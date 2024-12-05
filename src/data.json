@@ -1,0 +1,167 @@
+{
+  "categories": [
+    {
+      "img": "/img/categories/athletes.png",
+      "name": "Athletes",
+      "activity": "Sports"
+    },
+    {
+      "img": "/img/categories/artists.png",
+      "name": "Artists",
+      "activity": "Art"
+    },
+    {
+      "img": "/img/categories/community-leaders.png",
+      "name": "Community Leaders",
+      "activity": "Leaders"
+    },
+    {
+      "img": "/img/categories/environmental-stewards.png",
+      "name": "Environmental Stewards",
+      "activity": "Environmental"
+    },
+    {
+      "img": "/img/categories/scholars.png",
+      "name": "Scholars",
+      "activity": "Scholarship"
+    },
+    {
+      "img": "/img/categories/awards.png",
+      "name": "Awards",
+      "variant": "awards"
+    }
+  ],
+  "students": [
+    {
+      "img": "/img/students/jordan-smith.jpg",
+      "name": "Jordan Smith",
+      "year": "2024",
+      "activity": "Sports",
+      "team": "Varsity Soccer",
+      "intro": "Jordan is the captain of the Varsity Soccer Team.",
+      "description": "As captain, Jordan led the team to the state championships in 2024, showcasing exceptional leadership both on and off the field. Known for their agility and strategic gameplay, Jordan has become a role model for younger players, inspiring teamwork and determination across the team."
+    },
+    {
+      "img": "/img/students/emily-carter.jpg",
+      "name": "Emily Carter",
+      "year": "2023",
+      "activity": "Sports",
+      "team": "Track and Field",
+      "intro": "Emily holds the school record for the 400-meter dash.",
+      "description": "Emily’s record-breaking performance at the regional meet secured her position as one of the top sprinters in the state. Her dedication to rigorous training and her ability to balance academics with athletics make her an exemplary student-athlete."
+    },
+    {
+      "img": "/img/students/ryan-nguyen.jpg",
+      "name": "Ryan Nguyen",
+      "year": "2025",
+      "activity": "Sports",
+      "team": "Basketball",
+      "intro": "Ryan is the leading scorer on the Varsity Basketball Team.",
+      "description": "With an average of 20 points per game, Ryan has propelled the basketball team to their best season in a decade. Off the court, Ryan is equally passionate about mentoring younger players, offering guidance and motivation."
+    },
+    {
+      "img": "/img/students/sophia-hernandez.jpg",
+      "name": "Sophia Hernandez",
+      "year": "2024",
+      "activity": "Art",
+      "team": "Visual Arts Club",
+      "intro": "Sophia is known for her breathtaking mural work on campus.",
+      "description": "Sophia’s murals have transformed the campus walls into vibrant stories of community and hope. Her artistic vision not only beautifies the environment but also highlights themes of diversity and inclusion."
+    },
+    {
+      "img": "/img/students/liam-patel.jpg",
+      "name": "Liam Patel",
+      "year": "2023",
+      "activity": "Art",
+      "team": "Theater Arts",
+      "intro": "Liam starred as the lead in this year’s school musical.",
+      "description": "Liam’s commanding stage presence brought the character of Jean Valjean to life in the school’s rendition of *Les Misérables*. Beyond acting, Liam is deeply involved in set design and encourages others to explore their theatrical talents."
+    },
+    {
+      "img": "/img/students/amara-lee.jpg",
+      "name": "Amara Lee",
+      "year": "2025",
+      "activity": "Art",
+      "team": "Photography Club",
+      "intro": "Amara is an award-winning photographer.",
+      "description": "Amara’s keen eye for detail has earned her several accolades at local photography contests. Her photos often focus on nature and human connection, reflecting Evergreen Academy’s core values."
+    },
+    {
+      "img": "/img/students/aiden-roberts.jpg",
+      "name": "Aiden Roberts",
+      "year": "2023",
+      "activity": "Leaders",
+      "team": "Student Government",
+      "intro": "Aiden served as student body president.",
+      "description": "During his tenure, Aiden implemented initiatives to improve mental health resources and enhance communication between students and staff. His leadership has left a lasting legacy of inclusivity and progress."
+    },
+    {
+      "img": "/img/students/chloe-martin.jpg",
+      "name": "Chloe Martin",
+      "year": "2024",
+      "activity": "Environmental",
+      "team": "Eco Warriors Club",
+      "intro": "Chloe founded the Eco Warriors Club at Evergreen Academy.",
+      "description": "Chloe’s passion for sustainability led her to create a club dedicated to reducing the school’s carbon footprint. Her initiatives include tree planting, waste reduction programs, and eco-education workshops for students."
+    },
+    {
+      "img": "/img/students/noah-adams.jpg",
+      "name": "Noah Adams",
+      "year": "2023",
+      "activity": "Environmental",
+      "team": "Recycling Program",
+      "intro": "Noah revamped the school’s recycling program.",
+      "description": "By implementing new collection systems and educating students about proper recycling practices, Noah doubled the school’s recycling rate. His efforts have become a model for other schools in the district."
+    },
+    {
+      "img": "/img/students/liam-garcia.jpg",
+      "name": "Liam Garcia",
+      "year": "2024",
+      "activity": "Scholarship",
+      "team": "Science Fair",
+      "intro": "Liam developed an award-winning robotics project.",
+      "description": "Liam’s robotics project, focusing on AI-driven prosthetics, won first place at the state science fair. His innovative work bridges technology and compassion, addressing real-world challenges."
+    },
+    {
+      "img": "/img/students/sophia-bennett.jpg",
+      "name": "Sophia Bennett",
+      "year": "2025",
+      "activity": "Scholarship",
+      "team": "Literary Magazine",
+      "intro": "Sophia is the editor-in-chief of the school’s literary magazine.",
+      "description": "Sophia’s leadership has transformed the literary magazine into a platform for student creativity. Her insightful editing and compelling writing have elevated the publication to new heights."
+    }
+  ],
+  "awards": [
+    {
+      "icon": "speaking",
+      "headline": "Debate Leading Chapter",
+      "variant": "primary",
+      "years": ["2000", "2004", "2009", "2011", "2016", "2020", "2023"]
+    },
+    {
+      "icon": "environment",
+      "headline": "Environmental Stewardship",
+      "variant": "secondary",
+      "years": ["1998", "2001", "2005", "2010", "2014", "2018", "2022"]
+    },
+    {
+      "icon": "trophy",
+      "headline": "Athletic Achievement",
+      "variant": "tertiary",
+      "years": ["1997", "2000", "2003", "2007", "2013", "2017", "2021"]
+    },
+    {
+      "icon": "art",
+      "headline": "Artistic Achievement",
+      "variant": "primary",
+      "years": ["1996", "1999", "2002", "2008", "2012", "2019", "2024"]
+    },
+    {
+      "icon": "writing",
+      "headline": "Creative Writing",
+      "variant": "secondary",
+      "years": ["1995", "1998", "2001", "2006", "2010", "2015", "2023"]
+    }
+  ]
+}

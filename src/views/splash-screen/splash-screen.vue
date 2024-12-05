@@ -25,10 +25,7 @@ import VideoMp4 from '@/assets/video/evergreen-academy.mp4'
       </main>
       <section class="cluster justify-between">
         <div class="cluster">
-          <ea-btn variant="primary" icon="world" href="/groups">Groups</ea-btn>
-          <ea-btn variant="primary" href="/students"> Students</ea-btn>
-          <ea-btn variant="primary" href="/awards">Awards</ea-btn>
-          <ea-btn variant="primary" href="/profile">Student Profile</ea-btn>
+          <ea-btn variant="primary" icon="world" href="/categories">Explore</ea-btn>
         </div>
         <div class="cluster">
           <ea-dialog-qr-code></ea-dialog-qr-code>
