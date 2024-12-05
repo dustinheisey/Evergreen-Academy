@@ -1,0 +1,19 @@
+.card {
+  box-shadow: var(--shadow-s);
+  border-radius: var(--radius-l);
+  transition:
+    box-shadow 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
+  background-color: var(var(--color-surface-container-high));
+}
+
+.card-award {
+  outline: 4px solid var(--color-surface);
+  outline-offset: 5px;
+}
+
+.card:not(.card-award):hover {
+  box-shadow: var(--shadow-m);
+  transform: translateY(-5px);
+  cursor: pointer;
+}

@@ -24,9 +24,6 @@ const { students } = defineProps<{
 <style scoped lang="scss">
 .grid {
   padding-block: var(--space-2xs);
-}
-
-.stack {
-  block-size: 100%;
+  overflow-y: scroll;
 }
 </style>

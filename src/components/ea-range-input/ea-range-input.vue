@@ -89,21 +89,6 @@ input[type='range']:focus::-webkit-slider-thumb {
     0 0 0 6px var(--color-primary);
 }
 
-output {
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-s);
-  color: var(--color-on-primary);
-  display: inline-block;
-  position: relative;
-  line-height: 1.5;
-  text-align: center;
-  border-radius: 5px;
-  background: var(--color-primary);
-  padding: var(--space-3xs) var(--space-2xs);
-  margin: 0;
-  min-inline-size: 9ch;
-}
-
 input[type='range'] {
   cursor: pointer;
   appearance: none;

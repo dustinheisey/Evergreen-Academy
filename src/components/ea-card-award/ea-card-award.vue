@@ -21,7 +21,7 @@ const props = defineProps<{
   <component
     :is="cardHref ? 'router-link' : 'article'"
     :to="cardHref"
-    :class="['theme-' + variant, 'card', 'stack', 'gap-s', 'inset-m', 'align-center']"
+    :class="['theme-' + variant, 'card', 'card-award', 'stack', 'gap-s', 'inset-m', 'align-center']"
   >
     <ea-icon class="award-icon" :name="icon" size="xl" variant="primary"></ea-icon>
     <h3 class="color-primary text-center split">{{ headline }}</h3>
@@ -42,20 +42,6 @@ const props = defineProps<{
   border-radius: var(--radius-l);
   padding: var(--space-m);
   border: 4px solid var(--color-on-primary);
-}
-
-.card {
-  box-shadow: var(--shadow-s);
-  border-radius: var(--radius-l);
-  transition:
-    box-shadow 0.2s ease-in-out,
-    transform 0.2s ease-in-out;
-  outline: 4px solid var(--color-surface);
-  outline-offset: 5px;
-
-  &:hover {
-    box-shadow: var(--shadow-m);
-  }
 }
 
 img {

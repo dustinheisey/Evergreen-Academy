@@ -31,8 +31,4 @@ defineProps<{
   padding-left: var(--space-xs);
   scroll-padding-left: var(--space-xs);
 }
-
-.stack {
-  block-size: 100%;
-}
 </style>

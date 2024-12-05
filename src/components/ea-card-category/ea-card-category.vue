@@ -28,21 +28,7 @@ const props = defineProps<{
 </template>
 
 <style scoped lang="scss">
-.card {
-  box-shadow: var(--shadow-s);
-  border-radius: var(--radius-l);
-  transition:
-    box-shadow 0.2s ease-in-out,
-    transform 0.2s ease-in-out;
-}
-
 img {
   inline-size: 100%;
-}
-
-.card:hover {
-  box-shadow: var(--shadow-m);
-  transform: translateY(-5px);
-  cursor: pointer;
 }
 </style>

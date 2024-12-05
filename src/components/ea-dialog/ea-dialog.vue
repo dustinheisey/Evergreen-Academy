@@ -30,7 +30,7 @@ const closeModal = (): void => {
 </script>
 
 <template>
-  <ea-btn :variant="btnVariant" :icon="icon" @click="showModal" :aria-label="title">{{
+  <ea-btn :variant="btnVariant" :icon="icon" @click="showModal" :label="title">{{
     btnLabel
   }}</ea-btn>
   <dialog class="modal inset-s theme-surface" @close="closeModal" ref="modal" data-modal>
@@ -42,7 +42,7 @@ const closeModal = (): void => {
           variant="icon-subtle"
           icon="close"
           @click="closeModal"
-          aria-label="Close"
+          label="Close"
         ></ea-btn>
       </div>
       <hr />
@@ -66,6 +66,6 @@ hr {
 }
 h2 {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: var(--font-size-m);
 }
 </style>

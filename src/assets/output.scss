@@ -1,0 +1,13 @@
+output {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-s);
+  color: var(--color-on-primary);
+  display: inline-block;
+  position: relative;
+  line-height: 1.5;
+  text-align: center;
+  border-radius: var(--radius-s);
+  background: var(--color-primary);
+  padding: var(--space-3xs) var(--space-2xs);
+  margin: 0;
+}

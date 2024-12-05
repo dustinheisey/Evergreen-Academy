@@ -5,12 +5,14 @@ import { computed } from 'vue'
 
 const {
   variant = 'primary',
+  label,
   icon,
   size = 'm',
   href,
 } = defineProps<{
   variant?: 'primary' | 'secondary' | 'tertiary' | 'icon' | 'icon-subtle'
   icon?: Icons
+  label?: string
   size?: 's' | 'm' | 'l'
   href?: string
 }>()
@@ -19,7 +21,7 @@ const classes = computed(() => ['btn', 'btn-' + variant, 'gap-xs'])
 </script>
 
 <template>
-  <component :is="href ? 'router-link' : 'button'" :to="href" :class="classes">
+  <component :is="href ? 'router-link' : 'button'" :to="href" :class="classes" :aria-label="label">
     <ea-icon v-if="icon" :name="icon" :size="size" />
     <slot></slot>
   </component>

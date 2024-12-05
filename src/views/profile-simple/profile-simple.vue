@@ -15,8 +15,10 @@ defineProps<{
 <template>
   <ea-layout>
     <div class="stack justify-center">
-      <section class="grid grid-2 gap-m">
-        <img :src="img" :alt="name" />
+      <section class="switcher switch-phone gap-m">
+        <div class="frame square fixed">
+          <img :src="img" :alt="name" />
+        </div>
         <ea-profile-text :name :year :activity :team :intro :description></ea-profile-text>
       </section>
     </div>
@@ -24,7 +26,14 @@ defineProps<{
 </template>
 
 <style>
-.stack {
-  block-size: 100%;
+.switcher {
+  overflow-y: scroll;
+}
+
+article {
+  flex-grow: 3;
+}
+img {
+  flex-grow: 2;
 }
 </style>

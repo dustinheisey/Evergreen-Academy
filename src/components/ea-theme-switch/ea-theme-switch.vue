@@ -68,21 +68,6 @@ label {
   margin: 0;
 }
 
-output {
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-s);
-  color: var(--color-on-primary);
-  display: inline-block;
-  position: relative;
-  line-height: 1.5;
-  text-align: center;
-  border-radius: 5px;
-  background: var(--color-primary);
-  padding: var(--space-3xs) var(--space-2xs);
-  margin: 0;
-  min-inline-size: 9ch;
-}
-
 .theme-switch {
   color: var(--color-primary);
 
