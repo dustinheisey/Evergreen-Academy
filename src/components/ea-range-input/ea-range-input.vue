@@ -1,18 +1,28 @@
 <script lang="ts" setup>
-import { ref, useId } from 'vue'
+import { ref, useId, watch } from 'vue'
 
 // Generate a unique ID for the input element
 const id: string = useId()
 
 // Define the value using `ref` and bind it to the range input with `v-model`
-const value = ref<number>(0)
 
-defineProps<{
+const { value } = defineProps<{
   label: string
   min: number | string
   max: number | string
-  unit: string
+  output: string
+  value: number
 }>()
+
+const valueRef = ref<number>(value)
+
+const emit = defineEmits<{
+  (event: 'update-value', value: number): void
+}>()
+
+watch(valueRef, (newValue) => {
+  emit('update-value', newValue) // Emit the updated value
+})
 </script>
 
 <template>
@@ -21,8 +31,8 @@ defineProps<{
       {{ label }}
     </label>
     <div class="cluster gap-xs">
-      <input :id="id" type="range" :min="min" :max="max" v-model="value" />
-      <output>{{ value + unit }}</output>
+      <input :id="id" type="range" :min="min" :max="max" v-model="valueRef" />
+      <output>{{ output }}</output>
     </div>
   </div>
 </template>

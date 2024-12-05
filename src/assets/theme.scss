@@ -8,6 +8,8 @@
   src: local('TrajanPro-Bold'), url('./fonts/Trajan_Pro/TrajanPro-Bold.ttf');
 }
 :root {
+  --font-size: 16px;
+  font-size: var(--font-size);
   // ? Typography
   --font-family-headline: 'Trajan Pro', Georgia, 'Times New Roman', 'Palatino Linotype', serif;
   --font-family-body: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro,

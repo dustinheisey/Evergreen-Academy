@@ -1,40 +1,27 @@
 <script setup lang="ts">
-import { ref, onMounted, watch } from 'vue'
+import { useThemeStore } from '@/stores/accessibility'
 
-const storageKey = 'theme-preference'
+const themeStore = useThemeStore()
 
-const isDarkMode = ref<boolean>(localStorage.getItem(storageKey) === 'true' || false)
+const emit = defineEmits<{
+  (event: 'switch-theme'): void
+}>()
 
-const toggleDarkMode = () => {
-  isDarkMode.value = !isDarkMode.value
+const switchTheme = () => {
+  emit('switch-theme')
 }
-
-const applyTheme = () => {
-  const rootElement = document.documentElement
-
-  if (isDarkMode.value) {
-    rootElement.setAttribute('data-theme', 'dark')
-  } else {
-    rootElement.setAttribute('data-theme', 'light')
-  }
-
-  localStorage.setItem(storageKey, isDarkMode.value.toString())
-}
-
-watch(isDarkMode, applyTheme)
-onMounted(applyTheme)
 </script>
 
 <template>
   <div class="cluster justify-between align-center full">
-    <label for="dark-mode-toggle">App Theme</label>
+    <label for="theme-switch">App Theme</label>
     <div class="cluster gap-xs">
       <button
-        @click="toggleDarkMode"
-        class="dark-mode-toggle"
-        :aria-label="isDarkMode ? 'Disable dark mode' : 'Enable dark mode'"
+        @click="switchTheme"
+        class="theme-switch"
+        :aria-label="themeStore.theme === 'dark' ? 'Disable dark mode' : 'Enable dark mode'"
         type="button"
-        id="dark-mode-toggle"
+        id="theme-switch"
         aria-live="polite"
       >
         <svg
@@ -69,7 +56,7 @@ onMounted(applyTheme)
           </mask>
         </svg>
       </button>
-      <output>{{ isDarkMode ? 'Dark' : 'Light' }}</output>
+      <output>{{ themeStore.themeFormatted }}</output>
     </div>
   </div>
 </template>
@@ -96,7 +83,7 @@ output {
   min-inline-size: 9ch;
 }
 
-.dark-mode-toggle {
+.theme-switch {
   color: var(--color-primary);
 
   --size: 1.5rem;
@@ -171,7 +158,7 @@ output {
   }
 }
 
-.dark-mode-toggle {
+.theme-switch {
   background: none;
   border: none;
   padding: 0;
@@ -185,7 +172,7 @@ output {
   outline-offset: 5px;
 }
 
-.dark-mode-toggle > svg {
+.theme-switch > svg {
   inline-size: 100%;
   block-size: 100%;
   stroke-linecap: round;
@@ -213,36 +200,36 @@ output {
   opacity: 0;
 }
 
-.dark-mode-toggle > .sun-and-moon > .sun {
+.theme-switch > .sun-and-moon > .sun {
   fill: var(--icon-fill);
 }
 
-.dark-mode-toggle:is(:hover, :focus-visible) > .sun-and-moon > .sun {
+.theme-switch:is(:hover, :focus-visible) > .sun-and-moon > .sun {
   fill: var(--icon-fill);
 }
 
-.dark-mode-toggle:is(:hover, :focus-visible) > .sun-and-moon > .sun-beams {
+.theme-switch:is(:hover, :focus-visible) > .sun-and-moon > .sun-beams {
   stroke: var(--icon-fill);
 }
 
-[data-theme='dark'] .dark-mode-toggle > .sun-and-moon > .sun {
+[data-theme='dark'] .theme-switch > .sun-and-moon > .sun {
   fill: var(--icon-fill);
 }
 
-[data-theme='dark'] .dark-mode-toggle:is(:hover, :focus-visible) > .sun-and-moon > .sun {
+[data-theme='dark'] .theme-switch:is(:hover, :focus-visible) > .sun-and-moon > .sun {
   fill: var(--icon-fill);
 }
 
-[data-theme='dark'] .dark-mode-toggle > .sun-and-moon > .sun-beams {
+[data-theme='dark'] .theme-switch > .sun-and-moon > .sun-beams {
   stroke: var(--icon-fill);
 }
 
-[data-theme='dark'] .dark-mode-toggle:is(:hover, :focus-visible) > .sun-and-moon > .sun-beams {
+[data-theme='dark'] .theme-switch:is(:hover, :focus-visible) > .sun-and-moon > .sun-beams {
   stroke: var(--icon-fill);
 }
 
 @media (hover: none) {
-  .dark-mode-toggle {
+  .theme-switch {
     --size: 2rem;
   }
 }
