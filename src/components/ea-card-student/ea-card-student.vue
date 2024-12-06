@@ -10,10 +10,10 @@ defineProps<Student>()
       <img :src="`/img/students/${slug}.jpg`" :alt="name" />
     </div>
     <section class="student-info stack gap-0 inset-m align-center text-center">
-      <h3 class="color-primary">{{ name }}</h3>
-      <p class="overline inline gap-2xs">
-        <span>{{ year }}</span>
-        <span>|</span><span>{{ team }}</span>
+      <h3 class="color-primary section-headline">{{ name }}</h3>
+      <p class="cluster justify-center gap-2xs">
+        <span class="overline">{{ team }}</span>
+        <span class="badge badge-tertiary">{{ year }}</span>
       </p>
     </section>
   </router-link>

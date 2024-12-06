@@ -7,19 +7,18 @@ const props = defineProps<Student>()
 
 <template>
   <ea-layout>
-    <div class="stack justify-center">
-      <section class="switcher switch-phone gap-m">
-        <div class="frame square fixed">
-          <img :src="`/img/students/${slug}.jpg`" :alt="name" />
-        </div>
-        <ea-profile-text v-bind="props"></ea-profile-text>
-      </section>
-    </div>
+    <section class="switcher switch-phone gap-m">
+      <div class="frame square fixed">
+        <img :src="`/img/students/${slug}.jpg`" :alt="name" />
+      </div>
+      <ea-profile-text v-bind="props"></ea-profile-text>
+    </section>
   </ea-layout>
 </template>
 
 <style>
 .stack {
+  inline-size: 100%;
   max-inline-size: var(--max-inline-size);
 }
 

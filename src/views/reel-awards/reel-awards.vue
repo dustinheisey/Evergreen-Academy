@@ -9,16 +9,15 @@ defineProps<{
 
 <template>
   <ea-layout>
-    <div class="stack justify-center">
-      <section class="reel center gap-l">
-        <ea-card-award v-for="(award, index) in awards" v-bind="award" :key="index"></ea-card-award>
-      </section>
-    </div>
+    <section class="reel center gap-l">
+      <ea-card-award v-for="(award, index) in awards" v-bind="award" :key="index"></ea-card-award>
+    </section>
   </ea-layout>
 </template>
 
 <style scoped lang="scss">
 .stack {
+  inline-size: 100%;
   max-inline-size: var(--max-inline-size);
 }
 .reel {

@@ -17,6 +17,7 @@ defineProps<{
 
 <style scoped lang="scss">
 section {
+  inline-size: 100%;
   max-inline-size: var(--max-inline-size);
   padding-block: var(--space-2xs);
 }

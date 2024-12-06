@@ -8,16 +8,15 @@ const { students } = defineProps<{
 
 <template>
   <ea-layout>
-    <div class="stack justify-center">
-      <section class="grid grid-3 gap-m">
-        <ea-card-student v-for="(student, index) in students" :key="index" v-bind="student" />
-      </section>
-    </div>
+    <section class="grid grid-3 gap-m">
+      <ea-card-student v-for="(student, index) in students" :key="index" v-bind="student" />
+    </section>
   </ea-layout>
 </template>
 
 <style scoped lang="scss">
-.grid {
+section {
+  inline-size: 100%;
   max-inline-size: var(--max-inline-size);
   padding-block: var(--space-2xs);
 }
