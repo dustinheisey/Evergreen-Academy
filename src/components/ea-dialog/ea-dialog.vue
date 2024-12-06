@@ -14,6 +14,7 @@ const {
   btnVariant?: 'primary' | 'secondary' | 'tertiary' | 'icon' | 'icon-subtle'
   icon?: Icon
   btnLabel?: string
+  btnId: string
 }>()
 
 const showModal = (): void => {
@@ -30,7 +31,7 @@ const closeModal = (): void => {
 </script>
 
 <template>
-  <ea-btn :variant="btnVariant" :icon="icon" @click="showModal" :label="title">{{
+  <ea-btn :variant="btnVariant" :icon="icon" @click="showModal" :label="title" :id="btnId">{{
     btnLabel
   }}</ea-btn>
   <dialog class="modal inset-s theme-surface" @close="closeModal" ref="modal" data-modal>
@@ -43,6 +44,7 @@ const closeModal = (): void => {
           icon="close"
           @click="closeModal"
           label="Close"
+          id="close_btn"
         ></ea-btn>
       </div>
       <hr />

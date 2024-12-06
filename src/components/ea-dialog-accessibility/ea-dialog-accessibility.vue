@@ -46,7 +46,7 @@ onMounted(applyAccessibility)
 </script>
 
 <template>
-  <ea-dialog icon="accessibility" title="Accessibility Options">
+  <ea-dialog icon="accessibility" title="Accessibility Options" btnId="accessibility_btn">
     <div class="stack gap-xs inset-s align-start">
       <ea-theme-switch @switch-theme="switchTheme"></ea-theme-switch>
       <ea-range-input

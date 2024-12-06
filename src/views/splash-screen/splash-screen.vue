@@ -18,7 +18,7 @@ const mobile = computed(() => window.matchMedia('(max-width: 640px)').matches)
     <div class="filter" />
     <div class="cover gap-xs">
       <header class="cluster justify-end">
-        <ea-btn variant="icon" icon="search" label="Search"></ea-btn>
+        <ea-btn variant="icon" icon="search" label="Search" id="search_btn"></ea-btn>
       </header>
       <main class="main center center-intrinsic">
         <h1 class="cluster gap-xs justify-center">
@@ -28,7 +28,15 @@ const mobile = computed(() => window.matchMedia('(max-width: 640px)').matches)
       </main>
       <section class="cluster justify-between">
         <div class="cluster">
-          <ea-btn variant="primary" icon="world" href="/categories" label="Explore">Explore</ea-btn>
+          <ea-btn
+            variant="primary"
+            icon="world"
+            href="/categories"
+            label="Explore"
+            id="explore_btn"
+          >
+            Explore
+          </ea-btn>
         </div>
         <div class="cluster">
           <ea-dialog-qr-code v-if="!mobile"></ea-dialog-qr-code>

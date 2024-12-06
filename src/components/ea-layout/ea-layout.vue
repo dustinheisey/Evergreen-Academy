@@ -15,7 +15,7 @@ const mobile = computed(() => window.matchMedia('(max-width: 640px)').matches)
         <Logo class="logo" />
         <h2 class="color-primary" v-if="showHeader">Evergreen Academy</h2>
       </RouterLink>
-      <ea-btn variant="icon" icon="search" label="Search"></ea-btn>
+      <ea-btn variant="icon" icon="search" label="Search" id="search_btn"></ea-btn>
     </header>
     <main class="center full">
       <slot></slot>

@@ -4,7 +4,7 @@ import QRCode from '@/assets/img/qr-code.png'
 </script>
 
 <template>
-  <ea-dialog btnVariant="icon" icon="qr-code" title="QR Code">
+  <ea-dialog btnVariant="icon" icon="qr-code" title="QR Code" btnId="qr_code_btn">
     <div class="stack gap-xs inset-m align-center">
       <ea-icon name="camera" size="xl"></ea-icon>
       <p class="caption space-xs">Scan with your Camera App to view the app on your phone.</p>
