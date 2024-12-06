@@ -24,7 +24,7 @@ const router = createRouter({
       name: `${category.name} Students`,
       component: () => import('@/views/grid-students/grid-students.vue'),
       props: () => ({
-        students: data.students.filter((student) => student.category === category.slug),
+        students: data.students.filter((student: Student) => student.category === category.slug),
       }),
     })),
     ...data.students.map((student: Student) => ({

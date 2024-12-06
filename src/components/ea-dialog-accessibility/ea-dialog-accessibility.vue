@@ -53,7 +53,7 @@ onMounted(applyAccessibility)
         label="Adjust Base Font Size"
         min="12"
         max="24"
-        :value="16"
+        :value="fontSizeStore.fontSize"
         :output="fontSizeStore.fontSizeFormatted"
         @update-value="updateFontSize"
       ></ea-range-input>
@@ -61,7 +61,7 @@ onMounted(applyAccessibility)
         label="Zoom View"
         min="75"
         max="150"
-        :value="100"
+        :value="zoomStore.zoom"
         :output="zoomStore.zoomFormatted"
         @update-value="updateZoom"
       ></ea-range-input>

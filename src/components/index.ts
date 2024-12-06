@@ -1,6 +1,5 @@
 export { default as EaBackBtn } from '@/components/ea-back-btn/ea-back-btn.vue'
 export { default as EaBtn } from '@/components/ea-btn/ea-btn.vue'
-export { default as EaBtnGroup } from '@/components/ea-btn-group/ea-btn-group.vue'
 export { default as EaCardCategory } from '@/components/ea-card-category/ea-card-category.vue'
 export { default as EaCardStudent } from '@/components/ea-card-student/ea-card-student.vue'
 export { default as EaCardAward } from '@/components/ea-card-award/ea-card-award.vue'

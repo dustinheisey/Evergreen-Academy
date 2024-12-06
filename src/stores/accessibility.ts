@@ -16,7 +16,7 @@ export const useThemeStore = defineStore(
   },
   {
     persist: {
-      storage: localStorage, // Use localStorage for persistence
+      storage: localStorage,
     },
   },
 )
@@ -34,7 +34,7 @@ export const useFontSizeStore = defineStore(
   },
   {
     persist: {
-      storage: localStorage, // Use localStorage for persistence
+      storage: localStorage,
     },
   },
 )
@@ -52,7 +52,7 @@ export const useZoomStore = defineStore(
   },
   {
     persist: {
-      storage: localStorage, // Use localStorage for persistence
+      storage: localStorage,
     },
   },
 )

@@ -1,10 +1,7 @@
 <script lang="ts" setup>
 import { ref, useId, watch } from 'vue'
 
-// Generate a unique ID for the input element
 const id: string = useId()
-
-// Define the value using `ref` and bind it to the range input with `v-model`
 
 const { value } = defineProps<{
   label: string
@@ -21,7 +18,7 @@ const emit = defineEmits<{
 }>()
 
 watch(valueRef, (newValue) => {
-  emit('update-value', newValue) // Emit the updated value
+  emit('update-value', newValue)
 })
 </script>
 
