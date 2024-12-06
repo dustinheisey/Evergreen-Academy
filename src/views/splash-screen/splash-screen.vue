@@ -56,7 +56,7 @@ const mobile = computed(() => window.matchMedia('(max-width: 640px)').matches)
   inline-size: 7rem;
   block-size: auto;
   vertical-align: middle;
-  --logo-color: var(--color-on-primary);
+  --logo-color: var(--color-on-primary-light);
 }
 
 video {
@@ -72,6 +72,6 @@ video {
 }
 
 h1 {
-  color: var(--color-on-primary-fixed);
+  color: var(--color-on-primary-light);
 }
 </style>

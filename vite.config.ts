@@ -14,6 +14,7 @@ const pwaOptions: Partial<VitePWAOptions> = {
     name: 'Evergreen Academy',
     short_name: 'Evergreen',
     theme_color: '#1a4c23',
+    background_color: '#F7F9F4',
     icons: [
       {
         src: 'pwa-64x64.png',
