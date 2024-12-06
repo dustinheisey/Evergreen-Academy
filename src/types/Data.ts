@@ -3,7 +3,7 @@ import type { Icon, Theme } from '@/types'
 export interface Category {
   slug: string
   name: string
-  awards: boolean
+  awards?: boolean
 }
 
 export interface Student {

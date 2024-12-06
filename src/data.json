@@ -91,6 +91,24 @@
       "description": "During his tenure, Aiden implemented initiatives to improve mental health resources and enhance communication between students and staff. His leadership has left a lasting legacy of inclusivity and progress."
     },
     {
+      "slug": "maya-johnson",
+      "name": "Maya Johnson",
+      "year": "2024",
+      "category": "leadership",
+      "team": "Debate Team",
+      "intro": "Maya is a regional debate champion.",
+      "description": "With her persuasive arguments and in-depth research, Maya secured the regional debate title for Evergreen Academy. She mentors new team members and encourages them to find their voice in public speaking."
+    },
+    {
+      "slug": "ethan-kim",
+      "name": "Ethan Kim",
+      "year": "2025",
+      "category": "leadership",
+      "team": "Volunteer Club",
+      "intro": "Ethan led a major food drive for the local community.",
+      "description": "Ethan organized a school-wide food drive that collected over 5,000 meals for families in need. His ability to inspire participation highlights his genuine passion for community service and teamwork."
+    },
+    {
       "slug": "chloe-martin",
       "name": "Chloe Martin",
       "year": "2024",
@@ -109,6 +127,15 @@
       "description": "By implementing new collection systems and educating students about proper recycling practices, Noah doubled the school’s recycling rate. His efforts have become a model for other schools in the district."
     },
     {
+      "slug": "olivia-torres",
+      "name": "Olivia Torres",
+      "year": "2025",
+      "category": "environmental",
+      "team": "Greenhouse Project",
+      "intro": "Olivia manages the school’s greenhouse.",
+      "description": "Olivia’s leadership of the greenhouse project has provided fresh produce for the cafeteria and hands-on learning experiences for science students. Her dedication to sustainable agriculture is inspiring future environmentalists."
+    },
+    {
       "slug": "liam-garcia",
       "name": "Liam Garcia",
       "year": "2024",
@@ -125,6 +152,15 @@
       "team": "Literary Magazine",
       "intro": "Sophia is the editor-in-chief of the school’s literary magazine.",
       "description": "Sophia’s leadership has transformed the literary magazine into a platform for student creativity. Her insightful editing and compelling writing have elevated the publication to new heights."
+    },
+    {
+      "slug": "isabella-cruz",
+      "name": "Isabella Cruz",
+      "year": "2023",
+      "category": "scholarship",
+      "team": "Math Olympiad Team",
+      "intro": "Isabella won first place at the National Math Olympiad.",
+      "description": "Isabella’s mathematical prowess has earned her national recognition. Her logical thinking and problem-solving skills have inspired peers to strive for excellence in STEM fields."
     }
   ],
   "awards": [
