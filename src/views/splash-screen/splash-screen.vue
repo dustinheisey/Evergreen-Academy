@@ -50,7 +50,7 @@ const mobile = computed(() => window.matchMedia('(max-width: 640px)').matches)
 <style scoped lang="scss">
 .bg-img,
 .cover {
-  block-size: 100%;
+  block-size: 100vh;
 }
 .logo {
   inline-size: 7rem;
@@ -59,7 +59,7 @@ const mobile = computed(() => window.matchMedia('(max-width: 640px)').matches)
 }
 video {
   object-fit: cover;
-  block-size: 100%;
+  block-size: 100vh;
 }
 
 .filter {
