@@ -8,16 +8,8 @@
   src: local('TrajanPro-Bold'), url('./fonts/Trajan_Pro/TrajanPro-Bold.ttf');
 }
 
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 #app {
-  height: 100vh;
-  min-height: 100%;
+  max-block-size: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -36,7 +28,7 @@ body {
   --gap-page: var(--space-3xl-4xl);
   --gap-region: var(--space-2xl);
   --gap-section: var(--space-xs);
-  --max-inline-size: 1100px;
+  --max-inline-size: 1000px;
 
   // ? Elevation
   --shadow-inset: inset 0 2px 4px 0 rgb(0 0 0 / 10%);
