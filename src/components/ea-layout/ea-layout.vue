@@ -45,9 +45,12 @@ h1 {
 }
 
 main {
-  overflow-y: scroll;
+  overflow-y: auto;
   max-block-size: 100vh;
   flex-grow: 1;
-  max-inline-size: var(--max-inline-size);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
 }
 </style>

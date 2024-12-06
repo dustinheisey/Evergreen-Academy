@@ -19,6 +19,9 @@ const props = defineProps<Student>()
 </template>
 
 <style>
+.stack {
+  max-inline-size: var(--max-inline-size);
+}
 .switcher {
   overflow-y: scroll;
 }

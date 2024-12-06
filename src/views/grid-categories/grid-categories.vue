@@ -16,7 +16,8 @@ defineProps<{
 </template>
 
 <style scoped lang="scss">
-.grid {
+section {
+  max-inline-size: var(--max-inline-size);
   padding-block: var(--space-2xs);
 }
 </style>

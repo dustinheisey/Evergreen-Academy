@@ -18,6 +18,9 @@ defineProps<{
 </template>
 
 <style scoped lang="scss">
+.stack {
+  max-inline-size: var(--max-inline-size);
+}
 .reel {
   padding-block: var(--space-l);
   padding-left: var(--space-xs);

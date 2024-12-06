@@ -18,7 +18,7 @@ const { students } = defineProps<{
 
 <style scoped lang="scss">
 .grid {
+  max-inline-size: var(--max-inline-size);
   padding-block: var(--space-2xs);
-  overflow-y: scroll;
 }
 </style>
