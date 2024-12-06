@@ -22,9 +22,6 @@ const props = defineProps<Student>()
 .stack {
   max-inline-size: var(--max-inline-size);
 }
-.switcher {
-  overflow-y: scroll;
-}
 
 article {
   flex-grow: 3;
