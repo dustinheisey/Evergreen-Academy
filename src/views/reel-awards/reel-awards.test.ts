@@ -16,7 +16,7 @@ const props = {
   awards: [
     {
       icon: 'speaking',
-      name: 'Debate Leading Chapter',
+      name: 'Debate Leading',
       theme: 'primary',
       years: ['2000', '2004', '2009', '2011', '2016', '2020', '2023'],
     },

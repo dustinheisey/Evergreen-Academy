@@ -16,13 +16,17 @@ defineProps<{
 </template>
 
 <style scoped lang="scss">
-.stack {
+section {
   inline-size: 100%;
   max-inline-size: var(--max-inline-size);
 }
 .reel {
   padding-block: var(--space-l);
-  padding-left: var(--space-xs);
-  scroll-padding-left: var(--space-xs);
+  padding-inline: var(--space-xs);
+  scroll-padding-inline: var(--space-xs);
+}
+
+.reel > .card {
+  inline-size: min(20rem, 90%);
 }
 </style>

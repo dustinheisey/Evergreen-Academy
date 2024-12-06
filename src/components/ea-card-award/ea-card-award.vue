@@ -23,13 +23,6 @@ defineProps<Award>()
 </template>
 
 <style scoped lang="scss">
-.award-icon {
-  box-sizing: content-box;
-  border-radius: var(--radius-l);
-  padding: var(--space-m);
-  border: 4px solid var(--color-on-primary);
-}
-
 img {
   inline-size: 100%;
   border-bottom-left-radius: 0;
