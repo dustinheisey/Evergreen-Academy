@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { EaBtn, EaDialogQrCode, EaDialogAccessibility } from '@/components'
-import Logo from '@/assets/img/logo.svg'
-// import VideoWebm from '@/assets/video/evergreen-academy.webm'
+import Logo from '@/assets/img/logo.png'
+import VideoWebm from '@/assets/video/evergreen-academy.webm'
 import VideoMp4 from '@/assets/video/evergreen-academy.mp4'
 
 const mobile = computed(() => window.matchMedia('(max-width: 640px)').matches)
@@ -11,7 +11,7 @@ const mobile = computed(() => window.matchMedia('(max-width: 640px)').matches)
 <template>
   <div class="bg-img">
     <video autoplay loop muted playsinline preload="auto">
-      <!-- <source type="video/webm" :src="VideoWebm" /> -->
+      <source type="video/webm" :src="VideoWebm" />
       <source type="video/mp4" :src="VideoMp4" />
       Your browser does not support the video tag.
     </video>
@@ -22,7 +22,7 @@ const mobile = computed(() => window.matchMedia('(max-width: 640px)').matches)
       </header>
       <main class="main center center-intrinsic">
         <h1 class="cluster gap-xs justify-center">
-          <Logo class="logo" />
+          <img :src="Logo" class="logo" alt="Evergreen Academy" />
           <span class="text-center">Evergreen Academy</span>
         </h1>
       </main>
