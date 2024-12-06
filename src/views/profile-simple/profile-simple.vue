@@ -7,7 +7,7 @@ const props = defineProps<Student>()
 
 <template>
   <ea-layout>
-    <section class="switcher switch-phone gap-m">
+    <section class="switcher center switch-phone gap-m">
       <div class="frame square fixed">
         <img :src="`/img/students/${slug}.jpg`" :alt="name" />
       </div>
@@ -16,8 +16,8 @@ const props = defineProps<Student>()
   </ea-layout>
 </template>
 
-<style>
-.stack {
+<style scoped lang="scss">
+section {
   inline-size: 100%;
   max-inline-size: var(--max-inline-size);
 }
@@ -25,7 +25,7 @@ const props = defineProps<Student>()
 article {
   flex-grow: 3;
 }
-img {
+.frame {
   flex-grow: 2;
 }
 </style>
