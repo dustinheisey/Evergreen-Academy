@@ -40,6 +40,9 @@ const pwaOptions: Partial<VitePWAOptions> = {
       },
     ],
   },
+  workbox: {
+    globPatterns: ['**/*.{js,css,html,ico,png,svg,mp4,webm}'],
+  },
 }
 
 export default defineConfig({
