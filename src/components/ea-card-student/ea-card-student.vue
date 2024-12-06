@@ -1,13 +1,21 @@
 <script setup lang="ts">
 import type { Student } from '@/types'
 
-defineProps<Student>()
+const studentImages = import.meta.glob('@/assets/img/students/*.jpg', {
+  eager: true,
+  query: '?url',
+  import: 'default',
+})
+
+const { slug } = defineProps<Student>()
+
+const src = studentImages[`/src/assets/img/students/${slug}.jpg`] as string
 </script>
 
 <template>
   <router-link :to="`/profile/${slug}`" class="card">
     <div class="frame">
-      <img :src="`/img/students/${slug}.jpg`" :alt="name" />
+      <img :src :alt="name" />
     </div>
     <section class="student-info stack gap-0 inset-m align-center text-center">
       <h3 class="color-primary section-headline">{{ name }}</h3>

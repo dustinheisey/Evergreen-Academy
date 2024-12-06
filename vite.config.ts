@@ -41,7 +41,7 @@ const pwaOptions: Partial<VitePWAOptions> = {
     ],
   },
   workbox: {
-    globPatterns: ['**/*.{js,css,html,ico,png,svg,mp4,webm}'],
+    globPatterns: ['**/*.{js,css,html,ico,jpg,png,svg,mp4}'],
   },
 }
 
