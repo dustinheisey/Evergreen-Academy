@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
-import Logo from '@/assets/img/logo.png'
+import Logo from '@/assets/img/logo.svg'
 import { EaBtn, EaBackBtn, EaDialogQrCode, EaDialogAccessibility } from '@/components'
 
 const showHeader = computed(() => !window.matchMedia('(max-width: 760px)').matches)
@@ -12,7 +12,7 @@ const mobile = computed(() => window.matchMedia('(max-width: 640px)').matches)
   <div class="cover gap-s inset-m">
     <header class="cluster justify-between header">
       <RouterLink to="/" class="cluster gap-xs">
-        <img :src="Logo" class="logo" alt="Evergreen Academy" />
+        <Logo class="logo" />
         <h2 class="color-primary" v-if="showHeader">Evergreen Academy</h2>
       </RouterLink>
       <ea-btn variant="icon" icon="search" label="Search" id="search_btn"></ea-btn>
