@@ -10,7 +10,7 @@ import { RouterView } from 'vue-router'
   </router-view>
 </template>
 
-<style>
+<style scoped lang="scss">
 .slide-fade-enter-active {
   transition: all 0.2s ease-out;
 }

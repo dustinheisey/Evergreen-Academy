@@ -53,7 +53,7 @@ const closeModal = (): void => {
   </dialog>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .modal {
   border: none;
   border-radius: var(--radius-m);

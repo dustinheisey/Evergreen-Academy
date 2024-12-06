@@ -30,7 +30,7 @@ const mobile = computed(() => window.matchMedia('(max-width: 640px)').matches)
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 .cover {
   block-size: 100%;
 }

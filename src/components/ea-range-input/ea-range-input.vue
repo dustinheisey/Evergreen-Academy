@@ -34,7 +34,7 @@ watch(valueRef, (newValue) => {
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 label {
   display: unset;
   inline-size: fit-content;
